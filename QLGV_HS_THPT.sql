@@ -1,71 +1,75 @@
-﻿-- 27/2/2018
+﻿---- Chỉnh sửa ngày 12/03/2018
+USE master
+DROP DATABASE QLGV_HS_THPT
+-- 27/2/2018
 Create database QLGV_HS_THPT
 go
 use QLGV_HS_THPT
 go
 create table MonHoc(
-MaMon char(10) primary key,
-TenMon varchar(50))
+MaMon VARCHAR(10) primary key,
+TenMon nvarchar(50),
+Khoi VARCHAR(10))
 go
 create table GiaoVien(
-MaGV char(10) primary key,
-TenGV varchar(50),
-GioiTinh char(3),
+MaGV VARCHAR(10) primary key,
+TenGV nvarchar(50),
+GioiTinh bit,
 NgaySinh date,
-SDT char(11),
-DiaChi varchar(50),
-Luong money,
-MaMon char(10) references MonHoc(MaMon))
+SDT varchar(11),
+DiaChi nvarchar(150),
+Luong BIGINT,
+MaMon varchar(10) references MonHoc(MaMon))
 go
 create table Lop(
-MaLop char(10) primary key,
-TenLop varchar(50),
-MaGVCN char(10) references GiaoVien(MaGV))
+MaLop varchar(10) primary key,
+TenLop nvarchar(50),
+MaGVCN varchar(10) references GiaoVien(MaGV))
 go
 create table HocSinh(
-MaHS char(10),
-TenHS varchar(50),
-GioiTinh char(3),
+MaHS varchar(10) PRIMARY KEY,
+TenHS nvarchar(50),
+GioiTinh bit,
 NgaySinh date,
-DiaChi varchar(50),
-DanToc varchar(50),
-TonGiao varchar(50),
-MaLop char(10) references Lop(MaLop))
+DiaChi nvarchar(150),
+DanToc nvarchar(50),
+TonGiao nvarchar(50),
+MaLop varchar(10) references Lop(MaLop))
 go
 Create table GiangDay(
-MaGV char(10) references GiaoVien(MaGV),
-MaLop char(10) references Lop(MaLop),
-Thu char(20),
+MaGV varchar(10) references GiaoVien(MaGV),
+MaLop varchar(10) references Lop(MaLop),
+Thu varchar(20),
 TietDay int,
 primary key (Thu,TietDay))
 
 -- Sửa bổ sung: 11/03/2018
 go
 create table ChuNhiem(
-MaGV char(10) references GiaoVien(MaGV),
-MaLop char(10) references Lop(MaLop),
+MaGV varchar(10) references GiaoVien(MaGV),
+MaLop varchar(10) references Lop(MaLop),
 NamHoc varchar(4),
 Primary key(MaGV,MaLop))
 go
 create table PhongHoc(
-MaPhong char(10) primary key,
-SoPhong varchar(10),
+MaPhong varchar(10) primary key,
+SoPhong int,
 SoChoToiDa int)
 go
 create table Phong_Lop(
-MaPhong char(10) references PhongHoc(MaPhong),
-MaLop char(10) references Lop(MaLop),
+MaPhong varchar(10) references PhongHoc(MaPhong),
+MaLop varchar(10) references Lop(MaLop),
 HocKy_NamHoc varchar(50),
-KipHoc varchar(5)
+KipHoc varchar(5),
 Primary key (MaPhong, MaLop))
 go
 create table Diem(
-MaHS char(10) references HocSinh(MaHS),
-MaMon char(10) references MonHoc(MaMon),
-DiemMieng char(5),
-Diem15ph char(5),
-Diem1Tiet char(5),
-DiemHocKy char(5),
+MaHS varchar(10) references dbo.HocSinh(MaHS),
+MaMon varchar(10) references MonHoc(MaMon),
+DiemMieng FLOAT,
+Diem15ph FLOAT,
+Diem1Tiet FLOAT,
+DiemHocKy FLOAT,
 Primary key (MaHS, MaMon))
 -----------------
 ---- Thủ Tục ----
