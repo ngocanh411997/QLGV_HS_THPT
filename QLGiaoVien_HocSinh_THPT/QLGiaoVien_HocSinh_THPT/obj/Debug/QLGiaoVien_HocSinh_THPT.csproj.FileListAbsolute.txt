@@ -1,0 +1,12 @@
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\QLGiaoVien_HocSinh_THPT.exe.config
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\QLGiaoVien_HocSinh_THPT.exe
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\QLGiaoVien_HocSinh_THPT.pdb
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\Dapper.dll
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\Dapper.xml
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.csprojResolveAssemblyReference.cache
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.Form1.resources
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.Properties.Resources.resources
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.View.VHocSinh.frmHocSinh.resources
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.csproj.GenerateResource.Cache
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.exe
+D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.pdb
