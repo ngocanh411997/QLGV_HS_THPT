@@ -10,3 +10,6 @@ D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSi
 D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.csproj.GenerateResource.Cache
 D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.exe
 D:\C#\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.pdb
+C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\bin\Debug\QLGiaoVien_HocSinh_THPT.exe.config
+C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.exe
+C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QLGiaoVien_HocSinh_THPT\QLGiaoVien_HocSinh_THPT\obj\Debug\QLGiaoVien_HocSinh_THPT.pdb
