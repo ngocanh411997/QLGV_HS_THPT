@@ -1,6 +1,6 @@
 ﻿---- Chỉnh sửa ngày 12/03/2018
-USE master
-DROP DATABASE QLGV_HS_THPT
+--USE master
+--DROP DATABASE QLGV_HS_THPT
 -- 27/2/2018
 Create database QLGV_HS_THPT
 go
@@ -57,49 +57,39 @@ Primary key (MaHS, MaMon))
 
 ---- Thủ Tục ----
 go
-Create Proc ThemHS(@Ma char(10), @Ten varchar(50), @GT char(3), @NgaySinh date, @DiaChi varchar(50), @DanToc varchar(50), @TonGiao varchar(50), @MaLop char(10))
+ALTER Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh bit, @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 insert into HocSinh(MaHS, TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,MaLop)
-values (@Ma, @Ten, @GT, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop)
+values (@MaLop, @TenHS, @GioiTinh, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop)
 END
 -- sửa học sinh
 go
-ALTER Proc SuaHS(@Ma char(10),  @Ten varchar(50), @GT char(3), @NgaySinh date, @DiaChi varchar(50), @DanToc varchar(50), @TonGiao varchar(50), @MaLop char(10))
+ALTER Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh bit, @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 Update HocSinh
-Set MaHS=@Ma,TenHS=@Ten,GioiTinh=@GT,NgaySinh=@NgaySinh,DiaChi=@DiaChi,DanToc=@DanToc,TonGiao=@TonGiao,MaLop=@MaLop
-WHERE MaHS=@Ma
-end
-go
-/* Create Proc XoaHS (@Ma char(10),  @Ten varchar(50), @GT char(3), @NgaySinh date, @DiaChi varchar(50), @DanToc varchar(50), @TonGiao varchar(50), @MaLop char(10))
-As
-Begin
-Delete MaHS , TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, MaLop
-Where @Ma = MaHS, @Ten = TenHS, @GT = GioiTinh, @NgaySinh = NgaySinh, @DiaChi= DiaChi, @DanToc = DanToc, @TonGiao = TonGiao, @MaLop = MaLop
-end */
-
--- GV
-Create proc ThemGV(@Ma char(10), @Ten varchar(50), @GT char(3), @NgaySinh date, @SDT char(11), @DiaChi varchar(50), @Luong money, @MaMon char(10))
-As 
-Begin
-Insert into GiaoVien(MaGV, TenGV, GioiTinh, NgaySinh,SDT,DiaChi,Luong,MaMon)
-Values (@Ma, @Ten, @GT, @NgaySinh, @SDT, @DiaChi, @Luong, @MaMon)
+Set MaHS=@MaHS,TenHS=@TenHS,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,DanToc=@DanToc,TonGiao=@TonGiao,MaLop=@MaLop
+WHERE MaHS=@MaHS
 end
 
 GO
-ALTER PROC SuaGV(@Ma char(10), @Ten varchar(50), @GT char(3), @NgaySinh date, @SDT char(11), @DiaChi varchar(50), @Luong money, @MaMon char(10))
+CREATE PROC XoaHS(@MaHS VARCHAR(10))
 AS
-UPDATE dbo.GiaoVien
-SET MaGV=@Ma,TenGV=@Ten,GioiTinh=@GT,NgaySinh=@NgaySinh,SDT=@SDT,DiaChi=@DiaChi,Luong=@Luong,MaMon=@MaMon
+BEGIN
+DELETE dbo.HocSinh
+WHERE MaHS=@MaHS
+END
 
+-- Hiện danh sách Học Sinh
+GO
+CREATE PROC DSHS
+AS
+BEGIN
+	SELECT *
+	FROM dbo.HocSinh
+END
 
-DROP TABLE dbo.GiangDay
- DROP TABLE dbo.PhongHoc
-
- ALTER TABLE dbo.Phong_Lop
- ADD SoChoToiDa INT
 
  -- Thêm điểm
  GO
@@ -121,20 +111,3 @@ ALTER PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph FL
  AS
  UPDATE dbo.Diem
  SET MaHS=@MaHS,MaMon=@MaMon,DiemMieng=@DiemMieng,Diem15ph=@Diem15ph,Diem1Tiet=@Diem1Tiet,DiemHocKy=@DiemHocKy
-
- --Thêm Môn Học
- GO
- CREATE PROC ThemMonHoc(@MaMon VARCHAR(10), @TenMon NVARCHAR(50), @Khoi VARCHAR(10))
- AS
- INSERT INTO dbo.MonHoc
-         ( MaMon, TenMon, Khoi )
- VALUES  ( @MaMon,@TenMon,@Khoi
-           )
--- Sửa Mon Học
-GO
-CREATE PROC SuaMonHoc(@MaMon VARCHAR(10), @TenMon NVARCHAR(50), @Khoi VARCHAR(10))
-AS
-UPDATE dbo.MonHoc
-SET MaMon=@MaMon,TenMon=@TenMon,Khoi=@Khoi
-
- 
