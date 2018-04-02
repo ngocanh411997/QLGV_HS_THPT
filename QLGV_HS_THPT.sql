@@ -54,6 +54,15 @@ Diem1Tiet FLOAT,
 DiemHocKy FLOAT,
 Primary key (MaHS, MaMon))
 -----------------
+-- Sửa CSDL
+GO
+ALTER TABLE dbo.HocSinh
+ALTER COLUMN GioiTinh NVARCHAR(5)
+
+GO
+ALTER TABLE dbo.GiaoVien
+ALTER COLUMN GioiTinh NVARCHAR(5)
+
 
 ---- Thủ Tục ----
 go

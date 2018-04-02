@@ -10,7 +10,7 @@ namespace QL_GV_HS_THPT.Entity
     {
         public string MaHS { get; set; }
         public string TenHS { get; set; }
-        public bool GioiTinh { get; set; }
+        public string GioiTinh { get; set; }
         public DateTime NgaySinh { get; set; }
         public string DiaChi { get; set; }
         public string DanToc { get; set; }
@@ -21,7 +21,7 @@ namespace QL_GV_HS_THPT.Entity
         {
             MaHS = "";
             TenHS = "";
-            GioiTinh = true;
+            GioiTinh = "";
             NgaySinh = DateTime.Parse("1/1/1997");
             DiaChi = "";
             DanToc = "";
@@ -29,7 +29,7 @@ namespace QL_GV_HS_THPT.Entity
             MaLop = "";
 
         }
-        public HocSinhEntity(string _MaHS, string _TenHS, bool _GioiTinh, DateTime _NgaySinh, string _DiaChi, string _DanToc, string _TonGiao, string _MaLop)
+        public HocSinhEntity(string _MaHS, string _TenHS, string _GioiTinh, DateTime _NgaySinh, string _DiaChi, string _DanToc, string _TonGiao, string _MaLop)
         {
             MaHS = _MaHS;
             TenHS = _TenHS;

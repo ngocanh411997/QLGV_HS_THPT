@@ -11,6 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+enum GioiTinh1
+{
+    Nam,Nu
+}
 namespace QL_GV_HS_THPT.View
 {
     public partial class frmHocSinh : Form
@@ -99,6 +103,7 @@ namespace QL_GV_HS_THPT.View
         {
             fluu = 0;
             txtMaHS.Text = Bus.TangMa();
+            txtMaHS.Enabled = false;
             DisEnl(true);
         }
 
@@ -139,12 +144,12 @@ namespace QL_GV_HS_THPT.View
             obj.NgaySinh = dtNgaySinh.Value;
             obj.DiaChi = txtDiaChi.Text;
 
-            bool gt = true;
+            string gt;
             if (radNam.Checked)
             {
-                gt = true;
+                gt = "Nam";
             }
-            else gt = false;
+            else gt = "Nữ";
 
             obj.GioiTinh = gt;
 
@@ -208,12 +213,15 @@ namespace QL_GV_HS_THPT.View
             dtNgaySinh.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["NgaySinh"].Value);
             txtDanToc.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DanToc"].Value);
             txtTonGiao.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TonGiao"].Value);
-            txtDiaChi.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DiaChi"].Value);                       
+            txtDiaChi.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DiaChi"].Value);
+            if (dgvHocSinh.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
+            else radNu.Checked = true;         
         }
 
         private void dgvHocSinh_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             dgvHocSinh.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
+        
     }
 }
