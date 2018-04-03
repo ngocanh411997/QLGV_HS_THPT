@@ -13,7 +13,7 @@ namespace QL_GV_HS_THPT.DAL
         private SqlConnection conn;
         public KetNoi()
         {
-            conn = new SqlConnection(@"Data Source=NGOCANH\NGOCANH;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=DESKTOP-7SK7HI5\SQLEXPRESS;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {
@@ -63,8 +63,8 @@ namespace QL_GV_HS_THPT.DAL
             //cmd.Connection = conn;
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
-            conn.Open();
             DataTable dt = new DataTable();
+            conn.Open();           
             da.Fill(dt);
             conn.Close();
             return dt;
