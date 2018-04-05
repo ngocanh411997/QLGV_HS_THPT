@@ -1,6 +1,6 @@
 ﻿---- Thủ Tục ----
 go
-ALTER Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh bit, @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+ALTER Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 insert into HocSinh(MaHS, TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,MaLop)
@@ -8,7 +8,7 @@ values (@MaLop, @TenHS, @GioiTinh, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop
 END
 -- sửa học sinh
 go
-ALTER Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh bit, @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+ALTER Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 Update HocSinh
@@ -26,11 +26,11 @@ END
 
 -- Hiện danh sách Học Sinh
 GO
-CREATE PROC DSHS
+ALTER PROC DSHS
 AS
 BEGIN
-	SELECT *
-	FROM dbo.HocSinh
+	SELECT MaHS,TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,TenLop
+	FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop
 END
 
 
@@ -54,3 +54,17 @@ CREATE PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph F
  AS
  UPDATE dbo.Diem
  SET MaHS=@MaHS,MaMon=@MaMon,DiemMieng=@DiemMieng,Diem15ph=@Diem15ph,Diem1Tiet=@Diem1Tiet,DiemHocKy=@DiemHocKy
+
+ -- 5/4/2018
+ GO
+ CREATE PROC Lop_SelectAll
+ AS
+ BEGIN
+ SELECT * FROM Lop
+ END;
+
+ -- 
+ SELECT NV.MaNV,NV.HoTen,NV.DanToc,NV.GioiTinh,NV.SDT,NV.QueQuan,NV.NgaySinh,NV.MaTDHV,PB.TenPB,NV.BacLuong FROM dbo.NhanVien NV, dbo.PhongBan PB 
+
+ GO
+ 

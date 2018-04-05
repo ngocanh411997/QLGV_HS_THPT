@@ -33,12 +33,7 @@ BEGIN
 	SELECT *
 	FROM GiaoVien
 END
-CREATE PROC GV_SelectAll
-AS
-BEGIN
-	SELECT *
-	FROM GiaoVien
-END
+
 CREATE PROC GV_SelectByID (@Ma Varchar(10))
 AS
 BEGIN

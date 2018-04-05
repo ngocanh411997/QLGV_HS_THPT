@@ -58,26 +58,26 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvHocSinh = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvHocSinh = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TonGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -99,9 +99,9 @@
             // 
             this.cbType.FormattingEnabled = true;
             this.cbType.Items.AddRange(new object[] {
-            "Theo Mã",
-            "Theo Tên",
-            "Theo Mã Lớp",
+            "Theo Mã HS",
+            "Theo Tên HS",
+            "Theo Lớp",
             "Theo Địa Chỉ"});
             this.cbType.Location = new System.Drawing.Point(205, 24);
             this.cbType.Name = "cbType";
@@ -350,9 +350,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(16, 88);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Mã Lớp";
+            this.label8.Text = "Tên Lớp";
             // 
             // label7
             // 
@@ -402,27 +402,6 @@
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Giới Tính";
-            // 
-            // dgvHocSinh
-            // 
-            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaHS,
-            this.TenHS,
-            this.MaLop,
-            this.GioiTinh,
-            this.NgaySinh,
-            this.DanToc,
-            this.TonGiao,
-            this.DiaChi});
-            this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHocSinh.Location = new System.Drawing.Point(3, 16);
-            this.dgvHocSinh.Name = "dgvHocSinh";
-            this.dgvHocSinh.Size = new System.Drawing.Size(882, 238);
-            this.dgvHocSinh.TabIndex = 0;
-            this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
-            this.dgvHocSinh.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHocSinh_RowPrePaint);
             // 
             // groupBox2
             // 
@@ -489,6 +468,27 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Quản Lý Học Sinh";
             // 
+            // dgvHocSinh
+            // 
+            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaHS,
+            this.TenHS,
+            this.GioiTinh,
+            this.NgaySinh,
+            this.DiaChi,
+            this.DanToc,
+            this.TonGiao,
+            this.TenLop});
+            this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHocSinh.Location = new System.Drawing.Point(3, 16);
+            this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.Size = new System.Drawing.Size(882, 238);
+            this.dgvHocSinh.TabIndex = 0;
+            this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
+            this.dgvHocSinh.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHocSinh_RowPrePaint);
+            // 
             // STT
             // 
             this.STT.HeaderText = "STT";
@@ -507,51 +507,41 @@
             this.TenHS.HeaderText = "Tên HS";
             this.TenHS.Name = "TenHS";
             // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.Name = "MaLop";
-            // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NgaySinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DanToc
-            // 
-            this.DanToc.DataPropertyName = "DanToc";
-            this.DanToc.HeaderText = "Dân Tộc";
-            this.DanToc.Name = "DanToc";
-            this.DanToc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanToc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TonGiao
-            // 
-            this.TonGiao.DataPropertyName = "TonGiao";
-            this.TonGiao.HeaderText = "Tôn Giáo";
-            this.TonGiao.Name = "TonGiao";
-            this.TonGiao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TonGiao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DiaChi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DanToc
+            // 
+            this.DanToc.DataPropertyName = "DanToc";
+            this.DanToc.HeaderText = "Dân Tộc";
+            this.DanToc.Name = "DanToc";
+            // 
+            // TonGiao
+            // 
+            this.TonGiao.DataPropertyName = "TonGiao";
+            this.TonGiao.HeaderText = "Tôn Giáo";
+            this.TonGiao.Name = "TonGiao";
+            // 
+            // TenLop
+            // 
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
             // 
             // frmHocSinh
             // 
@@ -570,10 +560,10 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -608,7 +598,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvHocSinh;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -616,14 +605,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.DataGridView dgvHocSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DanToc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TonGiao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
     }
 }

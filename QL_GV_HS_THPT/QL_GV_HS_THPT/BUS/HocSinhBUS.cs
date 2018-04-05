@@ -32,5 +32,9 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.DeleteData(ID);
         }
+        public DataTable GetListLop()
+        {
+            return da.GetListLop();
+        }
     }
 }

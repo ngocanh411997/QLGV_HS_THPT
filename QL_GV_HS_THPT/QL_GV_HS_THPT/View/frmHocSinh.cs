@@ -26,6 +26,15 @@ namespace QL_GV_HS_THPT.View
         {
             InitializeComponent();
         }
+        public void ShowLop()
+        {
+            DataTable dt = new DataTable();
+            dt = Bus.GetListLop();
+            cbMaLop.DataSource = dt;
+            cbMaLop.DisplayMember = "TenLop";
+            cbMaLop.ValueMember = "MaLop";
+
+        }
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -103,8 +112,8 @@ namespace QL_GV_HS_THPT.View
         {
             fluu = 0;
             txtMaHS.Text = Bus.TangMa();
-            txtMaHS.Enabled = false;
             DisEnl(true);
+            txtMaHS.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -138,7 +147,7 @@ namespace QL_GV_HS_THPT.View
             // xử lý
             obj.MaHS = txtMaHS.Text;
             obj.TenHS = txtTenHS.Text;
-            obj.MaLop = cbMaLop.Text;
+            obj.MaLop = cbMaLop.SelectedValue.ToString();
             obj.TonGiao = txtTonGiao.Text;
             obj.DanToc = txtDanToc.Text;
             obj.NgaySinh = dtNgaySinh.Value;
@@ -203,13 +212,14 @@ namespace QL_GV_HS_THPT.View
         {
             HienThi();
             DisEnl(false);
+            ShowLop();
         }
 
         private void dgvHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["MaHS"].Value);
             txtTenHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenHS"].Value);
-            cbMaLop.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["MaLop"].Value);
+            cbMaLop.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenLop"].Value);
             dtNgaySinh.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["NgaySinh"].Value);
             txtDanToc.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DanToc"].Value);
             txtTonGiao.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TonGiao"].Value);
