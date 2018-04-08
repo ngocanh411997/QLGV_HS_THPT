@@ -232,6 +232,12 @@ namespace QL_GV_HS_THPT.View
         {
             dgvHocSinh.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
-        
+
+        private void btnXemDiem_Click(object sender, EventArgs e)
+        {
+            frmXemDiem xemdiem = new frmXemDiem();
+            xemdiem.Show();
+            //this.Close();
+        }
     }
 }

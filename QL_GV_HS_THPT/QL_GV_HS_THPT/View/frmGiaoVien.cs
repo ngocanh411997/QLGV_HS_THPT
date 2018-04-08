@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using QL_GV_HS_THPT.Entity;
 using QL_GV_HS_THPT.DAL;
 using QL_GV_HS_THPT.BUS;
-
 namespace QL_GV_HS_THPT.View
 {
     public partial class frmGiaoVien : Form
@@ -145,9 +144,9 @@ namespace QL_GV_HS_THPT.View
                     DisEnl(false);
                     fluu = 1;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show("loi");
                 }
             }
             else

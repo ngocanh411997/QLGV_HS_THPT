@@ -13,13 +13,16 @@ namespace QL_GV_HS_THPT.DAL
         private SqlConnection conn;
         public KetNoi()
         {
-            conn = new SqlConnection(@"Data Source=NGOCANH\NGOCANH;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(strSql, conn);
-            conn.Open();
+            if (ConnectionState.Closed == conn.State)
+            {
+                conn.Open();
+            }
             da.Fill(dt);
             conn.Close();
             return dt;
@@ -64,7 +67,10 @@ namespace QL_GV_HS_THPT.DAL
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
-            conn.Open();           
+            if (ConnectionState.Closed == conn.State)
+            {
+                conn.Open();
+            }
             da.Fill(dt);
             conn.Close();
             return dt;
@@ -72,7 +78,10 @@ namespace QL_GV_HS_THPT.DAL
         public int ExcuteSQL(string strSQL)
         {
             SqlCommand cmd = new SqlCommand(strSQL, conn);
-            conn.Open();
+            if (ConnectionState.Closed == conn.State)
+            {
+                conn.Open();
+            }
             int count = cmd.ExecuteNonQuery();
             conn.Close();
             return count;
@@ -87,7 +96,10 @@ namespace QL_GV_HS_THPT.DAL
                 cmd.Parameters.AddRange(para);
             }
             cmd.Connection = conn;
-            conn.Open();
+            if (ConnectionState.Closed == conn.State)
+            {
+                conn.Open();
+            }
             int count = cmd.ExecuteNonQuery();
             conn.Close();
             return count;
