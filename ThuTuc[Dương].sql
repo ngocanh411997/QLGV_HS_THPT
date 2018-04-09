@@ -12,7 +12,7 @@ CREATE PROC SP_ThemDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@
  
  --sửa điểm
 GO
-ALTER PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
+CREATE PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
  AS
  BEGIN
  UPDATE dbo.Diem
@@ -35,7 +35,7 @@ ALTER PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@Di
  END
  GO 
 --Xem điểm theo môn
-ALTER PROC SP_XemDiemHS
+CREATE PROC SP_XemDiemHS
 AS
 BEGIN
 SELECT TenHS,Diem.MaMon,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc

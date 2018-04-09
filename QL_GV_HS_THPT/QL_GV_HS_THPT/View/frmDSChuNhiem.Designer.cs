@@ -41,9 +41,10 @@
             // 
             this.lbDSCN.AutoSize = true;
             this.lbDSCN.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDSCN.Location = new System.Drawing.Point(270, 24);
+            this.lbDSCN.Location = new System.Drawing.Point(202, 20);
+            this.lbDSCN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDSCN.Name = "lbDSCN";
-            this.lbDSCN.Size = new System.Drawing.Size(244, 26);
+            this.lbDSCN.Size = new System.Drawing.Size(196, 22);
             this.lbDSCN.TabIndex = 0;
             this.lbDSCN.Text = "Danh Sách Chủ Nhiệm";
             // 
@@ -56,10 +57,11 @@
             this.MaLop,
             this.NamHoc});
             this.dgvDSCN.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvDSCN.Location = new System.Drawing.Point(0, 77);
+            this.dgvDSCN.Location = new System.Drawing.Point(0, 63);
+            this.dgvDSCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDSCN.Name = "dgvDSCN";
             this.dgvDSCN.RowTemplate.Height = 24;
-            this.dgvDSCN.Size = new System.Drawing.Size(739, 201);
+            this.dgvDSCN.Size = new System.Drawing.Size(554, 163);
             this.dgvDSCN.TabIndex = 1;
             // 
             // STT
@@ -91,11 +93,12 @@
             // 
             // frmDSChuNhiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 278);
+            this.ClientSize = new System.Drawing.Size(554, 226);
             this.Controls.Add(this.dgvDSCN);
             this.Controls.Add(this.lbDSCN);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDSChuNhiem";
             this.Text = "Danh Sách Chủ Nhiệm";
             this.Load += new System.EventHandler(this.frmDSChuNhiem_Load);

@@ -22,7 +22,10 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.GetListMaLop();
         }
-
+        public DataTable GVCN()
+        {
+            return da.GVCN();
+        }
         public int InsertData(ChuNhiemEntity cn)
         {
             return da.InsertData(cn);

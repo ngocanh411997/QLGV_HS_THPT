@@ -22,7 +22,10 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.GetData("SP_SelectMaLop ", null);
         }
-
+        public DataTable GVCN()
+        {
+            return conn.GetData("Xem_GVCN", null);
+        }
         public int InsertData(ChuNhiemEntity cn)
         {
             SqlParameter[] para =

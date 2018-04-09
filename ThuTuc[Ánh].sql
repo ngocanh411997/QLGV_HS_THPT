@@ -1,6 +1,6 @@
 ﻿---- Thủ Tục ----
 go
-ALTER Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+CREATE Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 insert into HocSinh(MaHS, TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,MaLop)
@@ -8,7 +8,7 @@ values (@MaLop, @TenHS, @GioiTinh, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop
 END
 -- sửa học sinh
 go
-ALTER Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+CREATE Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 Update HocSinh
@@ -26,7 +26,7 @@ END
 
 -- Hiện danh sách Học Sinh
 GO
-ALTER PROC DSHS
+CREATE PROC DSHS
 AS
 BEGIN
 	SELECT MaHS,TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,TenLop

@@ -50,18 +50,27 @@
     <Compile Include="BUS\DiemBUS.cs" />
     <Compile Include="BUS\GiaoVienBus.cs" />
     <Compile Include="BUS\HocSinhBUS.cs" />
+    <Compile Include="BUS\LopBUS.cs" />
     <Compile Include="DAL\ChuNhiemDAL.cs" />
     <Compile Include="DAL\DiemDAL.cs" />
     <Compile Include="DAL\GiaoVienDAL.cs" />
     <Compile Include="DAL\Helper.cs" />
     <Compile Include="DAL\HocSinhDAL.cs" />
     <Compile Include="DAL\KetNoi.cs" />
+    <Compile Include="DAL\LopDAL.cs" />
     <Compile Include="Entity\ChuNhiemEntity.cs" />
     <Compile Include="Entity\Diem.cs" />
     <Compile Include="Entity\GiaoVienEntity.cs" />
     <Compile Include="Entity\HocSinhEntity.cs" />
+    <Compile Include="Entity\LopEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmChuNhiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChuNhiem.Designer.cs">
+      <DependentUpon>frmChuNhiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +94,12 @@
     </Compile>
     <Compile Include="View\frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
@@ -119,6 +134,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmChuNhiem.resx">
+      <DependentUpon>frmChuNhiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDiem.resx">
       <DependentUpon>frmDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
