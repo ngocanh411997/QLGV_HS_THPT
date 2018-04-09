@@ -13,7 +13,7 @@ namespace QL_GV_HS_THPT.DAL
         private SqlConnection conn;
         public KetNoi()
         {
-            conn = new SqlConnection(@"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=THANHVUONG\SQLEXPRESS88;Initial Catalog=QLGV_HS_THPT;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {
@@ -103,6 +103,29 @@ namespace QL_GV_HS_THPT.DAL
             int count = cmd.ExecuteNonQuery();
             conn.Close();
             return count;
+        }
+
+        public bool KiemTraTonTai(string querySQL, string Ma)
+        {
+            bool b = false;
+            SqlCommand cmd = new SqlCommand(querySQL, conn);
+            conn.Open();
+            SqlDataReader adt = cmd.ExecuteReader();
+            while (adt.Read())
+            {
+                if (Ma == adt[0].ToString())
+                {
+                    b = true;
+                    break;
+                }
+                else
+                {
+                    b = false;
+                    break;
+                }
+            }
+            conn.Close();
+            return b;
         }
     }
 }

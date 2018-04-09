@@ -204,6 +204,16 @@ namespace QL_GV_HS_THPT.View
 
         }
 
+        private void btnXemDSCN_Click(object sender, EventArgs e)
+        {
+            frmDSChuNhiem frmDSCN = new frmDSChuNhiem();
+            frmDSCN.Show();
+        }
 
+        private void btnThemCN_Click(object sender, EventArgs e)
+        {
+            frmThemChuNhiem frmThemCN = new frmThemChuNhiem();
+            frmThemCN.Show();
+        }
     }
 }
