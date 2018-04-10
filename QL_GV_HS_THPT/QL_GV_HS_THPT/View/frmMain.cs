@@ -15,6 +15,7 @@ namespace QL_GV_HS_THPT.View
         public frmMain()
         {
             InitializeComponent();
+            
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,6 +27,19 @@ namespace QL_GV_HS_THPT.View
         {
             frmQuanLyChung QLChung = new frmQuanLyChung();
             QLChung.ShowDialog();
+        }
+
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDangNhap dn = new frmDangNhap();
+            dn.Show();
+            this.Hide();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
