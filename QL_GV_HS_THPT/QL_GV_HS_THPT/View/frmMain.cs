@@ -38,7 +38,6 @@ namespace QL_GV_HS_THPT.View
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            
 
         }
     }
