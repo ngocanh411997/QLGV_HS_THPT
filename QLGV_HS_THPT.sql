@@ -53,6 +53,13 @@ Diem15ph FLOAT,
 Diem1Tiet FLOAT,
 DiemHocKy FLOAT,
 Primary key (MaHS, MaMon))
+
+create table NguoiDung(
+TaiKhoan varchar(50),
+MatKhau varchar(50) 
+)
+
+
 -----------------
 -- Sửa CSDL
 GO

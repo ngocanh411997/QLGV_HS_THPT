@@ -100,5 +100,10 @@ namespace QL_GV_HS_THPT.View
 
             txtTenGV.Text = d.Row["TenGV"].ToString();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
