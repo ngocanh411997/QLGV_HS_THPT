@@ -27,5 +27,12 @@ namespace QL_GV_HS_THPT.View
         {
             this.Close();
         }
+
+        private void btnChuNhiem_Click(object sender, EventArgs e)
+        {
+            frmQLChuNhiem qlcn = new frmQLChuNhiem();
+            qlcn.Show();
+
+        }
     }
 }

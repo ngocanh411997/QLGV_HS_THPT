@@ -80,6 +80,7 @@
             this.btnChuNhiem.Text = "Chủ Nhiệm";
             this.btnChuNhiem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChuNhiem.UseVisualStyleBackColor = true;
+            this.btnChuNhiem.Click += new System.EventHandler(this.btnChuNhiem_Click);
             // 
             // btnGiaoVien
             // 

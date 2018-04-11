@@ -38,6 +38,31 @@ namespace QL_GV_HS_THPT.DAL
             return conn.ExcuteSQL("SP_ThemChuNhiem ", para);
         }
 
+        public int EditData(ChuNhiemEntity cn)
+        {
+
+            SqlParameter[] para =
+            {
+                new SqlParameter("MaGV",cn.MaGV),
+                new SqlParameter("MaLop",cn.MaLop),
+                new SqlParameter("NamHoc",cn.NamHoc)
+
+        };
+            return conn.ExcuteSQL("SP_SuaCN ", para);
+        }
+
+
+        public int DeleteData(string Ma)
+        {
+
+            SqlParameter[] para =
+            {
+                new SqlParameter("MaGV",Ma),
+                
+
+        };
+            return conn.ExcuteSQL("SP_XoaCN ", para);
+        }
         public bool KiemTraTonTai(string Ma)
         {
             return conn.KiemTraTonTai("Select MaGV from ChuNhiem ", Ma);

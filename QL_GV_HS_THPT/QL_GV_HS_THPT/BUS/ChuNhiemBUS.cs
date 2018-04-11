@@ -30,6 +30,16 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.InsertData(cn);
         }
+
+        public int EditData(ChuNhiemEntity cn)
+        {
+            return da.EditData(cn);
+        }
+
+        public int DeleteData(string Ma)
+        {
+            return da.DeleteData(Ma);
+        }
         public bool KiemTraTonTai(string Ma)
         {
             return da.KiemTraTonTai(Ma);
