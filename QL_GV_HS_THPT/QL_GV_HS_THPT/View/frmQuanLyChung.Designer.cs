@@ -67,6 +67,7 @@
             this.btnMonHoc.Text = "Môn Học";
             this.btnMonHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMonHoc.UseVisualStyleBackColor = true;
+            this.btnMonHoc.Click += new System.EventHandler(this.btnMonHoc_Click);
             // 
             // btnChuNhiem
             // 
@@ -94,6 +95,7 @@
             this.btnGiaoVien.Text = "Giáo Viên";
             this.btnGiaoVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGiaoVien.UseVisualStyleBackColor = true;
+            this.btnGiaoVien.Click += new System.EventHandler(this.btnGiaoVien_Click);
             // 
             // label1
             // 
@@ -130,6 +132,7 @@
             this.btnLopHoc.Text = "Lớp Học";
             this.btnLopHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLopHoc.UseVisualStyleBackColor = true;
+            this.btnLopHoc.Click += new System.EventHandler(this.btnLopHoc_Click);
             // 
             // btnDiem
             // 
@@ -143,6 +146,7 @@
             this.btnDiem.Text = "Điểm";
             this.btnDiem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDiem.UseVisualStyleBackColor = true;
+            this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
             // 
             // btnHocSinh
             // 

@@ -56,9 +56,9 @@ namespace QL_GV_HS_THPT
         private void btnThem_Click(object sender, EventArgs e)
         {
             fluu = 0;
-            txtMaHS.Text = diembus.TangMa();
+           
             DisEnl(true);
-            txtMaHS.Enabled = false;
+         
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

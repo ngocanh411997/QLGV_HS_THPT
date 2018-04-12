@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbMalop = new System.Windows.Forms.Label();
-            this.txtMalop = new System.Windows.Forms.TextBox();
-            this.lbTenlop = new System.Windows.Forms.Label();
-            this.txtTenlop = new System.Windows.Forms.TextBox();
-            this.lbMagvcn = new System.Windows.Forms.Label();
+            this.btnGVCN = new System.Windows.Forms.Button();
             this.txtMagvcn = new System.Windows.Forms.TextBox();
+            this.lbMagvcn = new System.Windows.Forms.Label();
+            this.txtTenlop = new System.Windows.Forms.TextBox();
+            this.lbTenlop = new System.Windows.Forms.Label();
+            this.txtMalop = new System.Windows.Forms.TextBox();
+            this.lbMalop = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvLop = new System.Windows.Forms.DataGridView();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.dgvLop = new System.Windows.Forms.DataGridView();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.lbQLL = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaGVCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.cbType = new System.Windows.Forms.ComboBox();
-            this.btnGVCN = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.lbQLL = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
@@ -75,51 +75,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
             // 
-            // groupBox2
+            // btnGVCN
             // 
-            this.groupBox2.Controls.Add(this.dgvLop);
-            this.groupBox2.Location = new System.Drawing.Point(1, 261);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(629, 191);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách lớp";
+            this.btnGVCN.Location = new System.Drawing.Point(237, 77);
+            this.btnGVCN.Name = "btnGVCN";
+            this.btnGVCN.Size = new System.Drawing.Size(75, 35);
+            this.btnGVCN.TabIndex = 20;
+            this.btnGVCN.Text = "Giáo Viên Chủ Nhiệm";
+            this.btnGVCN.UseVisualStyleBackColor = true;
+            this.btnGVCN.Click += new System.EventHandler(this.btnGVCN_Click);
             // 
-            // lbMalop
+            // txtMagvcn
             // 
-            this.lbMalop.AutoSize = true;
-            this.lbMalop.Location = new System.Drawing.Point(29, 20);
-            this.lbMalop.Name = "lbMalop";
-            this.lbMalop.Size = new System.Drawing.Size(43, 13);
-            this.lbMalop.TabIndex = 0;
-            this.lbMalop.Text = "Mã Lớp";
-            this.lbMalop.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtMalop
-            // 
-            this.txtMalop.Location = new System.Drawing.Point(99, 12);
-            this.txtMalop.Name = "txtMalop";
-            this.txtMalop.Size = new System.Drawing.Size(100, 20);
-            this.txtMalop.TabIndex = 1;
-            this.txtMalop.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // lbTenlop
-            // 
-            this.lbTenlop.AutoSize = true;
-            this.lbTenlop.Location = new System.Drawing.Point(29, 57);
-            this.lbTenlop.Name = "lbTenlop";
-            this.lbTenlop.Size = new System.Drawing.Size(47, 13);
-            this.lbTenlop.TabIndex = 0;
-            this.lbTenlop.Text = "Tên Lớp";
-            this.lbTenlop.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtTenlop
-            // 
-            this.txtTenlop.Location = new System.Drawing.Point(99, 50);
-            this.txtTenlop.Name = "txtTenlop";
-            this.txtTenlop.Size = new System.Drawing.Size(100, 20);
-            this.txtTenlop.TabIndex = 1;
-            this.txtTenlop.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMagvcn.Location = new System.Drawing.Point(99, 85);
+            this.txtMagvcn.Name = "txtMagvcn";
+            this.txtMagvcn.Size = new System.Drawing.Size(100, 20);
+            this.txtMagvcn.TabIndex = 1;
+            this.txtMagvcn.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbMagvcn
             // 
@@ -131,13 +103,67 @@
             this.lbMagvcn.Text = "Mã GVCN";
             this.lbMagvcn.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtMagvcn
+            // txtTenlop
             // 
-            this.txtMagvcn.Location = new System.Drawing.Point(99, 85);
-            this.txtMagvcn.Name = "txtMagvcn";
-            this.txtMagvcn.Size = new System.Drawing.Size(100, 20);
-            this.txtMagvcn.TabIndex = 1;
-            this.txtMagvcn.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTenlop.Location = new System.Drawing.Point(99, 50);
+            this.txtTenlop.Name = "txtTenlop";
+            this.txtTenlop.Size = new System.Drawing.Size(100, 20);
+            this.txtTenlop.TabIndex = 1;
+            this.txtTenlop.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lbTenlop
+            // 
+            this.lbTenlop.AutoSize = true;
+            this.lbTenlop.Location = new System.Drawing.Point(29, 57);
+            this.lbTenlop.Name = "lbTenlop";
+            this.lbTenlop.Size = new System.Drawing.Size(47, 13);
+            this.lbTenlop.TabIndex = 0;
+            this.lbTenlop.Text = "Tên Lớp";
+            this.lbTenlop.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtMalop
+            // 
+            this.txtMalop.Location = new System.Drawing.Point(99, 12);
+            this.txtMalop.Name = "txtMalop";
+            this.txtMalop.Size = new System.Drawing.Size(100, 20);
+            this.txtMalop.TabIndex = 1;
+            this.txtMalop.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lbMalop
+            // 
+            this.lbMalop.AutoSize = true;
+            this.lbMalop.Location = new System.Drawing.Point(29, 20);
+            this.lbMalop.Name = "lbMalop";
+            this.lbMalop.Size = new System.Drawing.Size(43, 13);
+            this.lbMalop.TabIndex = 0;
+            this.lbMalop.Text = "Mã Lớp";
+            this.lbMalop.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvLop);
+            this.groupBox2.Location = new System.Drawing.Point(1, 261);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(629, 191);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách lớp";
+            // 
+            // dgvLop
+            // 
+            this.dgvLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaLop,
+            this.TenLop,
+            this.MaGVCN});
+            this.dgvLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLop.Location = new System.Drawing.Point(3, 16);
+            this.dgvLop.Name = "dgvLop";
+            this.dgvLop.Size = new System.Drawing.Size(623, 172);
+            this.dgvLop.TabIndex = 0;
+            this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
+            this.dgvLop.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvLop_RowPrePaint);
             // 
             // btnHuy
             // 
@@ -229,48 +255,6 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // dgvLop
-            // 
-            this.dgvLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaLop,
-            this.TenLop,
-            this.MaGVCN});
-            this.dgvLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLop.Location = new System.Drawing.Point(3, 16);
-            this.dgvLop.Name = "dgvLop";
-            this.dgvLop.Size = new System.Drawing.Size(623, 172);
-            this.dgvLop.TabIndex = 0;
-            this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
-            this.dgvLop.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvLop_RowPrePaint);
-            // 
-            // STT
-            // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaLop
-            // 
-            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.Name = "MaLop";
-            // 
-            // TenLop
-            // 
-            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
-            // 
-            // MaGVCN
-            // 
-            this.MaGVCN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGVCN.HeaderText = "Mã GVCN";
-            this.MaGVCN.Name = "MaGVCN";
-            // 
             // btnTimKiem
             // 
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -303,16 +287,6 @@
             this.cbType.Size = new System.Drawing.Size(181, 21);
             this.cbType.TabIndex = 19;
             // 
-            // btnGVCN
-            // 
-            this.btnGVCN.Location = new System.Drawing.Point(237, 77);
-            this.btnGVCN.Name = "btnGVCN";
-            this.btnGVCN.Size = new System.Drawing.Size(75, 35);
-            this.btnGVCN.TabIndex = 20;
-            this.btnGVCN.Text = "Giáo Viên Chủ Nhiệm";
-            this.btnGVCN.UseVisualStyleBackColor = true;
-            this.btnGVCN.Click += new System.EventHandler(this.btnGVCN_Click);
-            // 
             // btnLamMoi
             // 
             this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -336,6 +310,33 @@
             this.lbQLL.Size = new System.Drawing.Size(68, 13);
             this.lbQLL.TabIndex = 21;
             this.lbQLL.Text = "Quản Lý Lớp";
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaLop
+            // 
+            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            // 
+            // MaGVCN
+            // 
+            this.MaGVCN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGVCN.DataPropertyName = "MaGVCN";
+            this.MaGVCN.HeaderText = "Mã GVCN";
+            this.MaGVCN.Name = "MaGVCN";
             // 
             // frmLop
             // 
@@ -384,10 +385,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dgvLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaGVCN;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -395,5 +392,9 @@
         private System.Windows.Forms.Button btnGVCN;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label lbQLL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaGVCN;
     }
 }

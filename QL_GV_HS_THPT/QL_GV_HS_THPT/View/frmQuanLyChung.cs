@@ -21,6 +21,7 @@ namespace QL_GV_HS_THPT.View
         {
             frmHocSinh HocSinh = new frmHocSinh();
             HocSinh.ShowDialog();
+    
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -32,7 +33,32 @@ namespace QL_GV_HS_THPT.View
         {
             frmQLChuNhiem qlcn = new frmQLChuNhiem();
             qlcn.Show();
+    
 
+        }
+
+        private void btnGiaoVien_Click(object sender, EventArgs e)
+        {
+            frmGiaoVien GiaoVien = new frmGiaoVien();
+            GiaoVien.ShowDialog();
+        }
+
+        private void btnMonHoc_Click(object sender, EventArgs e)
+        {
+            frmMonHoc MonHoc = new frmMonHoc();
+            MonHoc.ShowDialog();
+        }
+
+        private void btnDiem_Click(object sender, EventArgs e)
+        {
+            frmDiem Diem = new frmDiem();
+            Diem.ShowDialog();
+        }
+
+        private void btnLopHoc_Click(object sender, EventArgs e)
+        {
+            frmLop Lop = new frmLop();
+            Lop.ShowDialog();
         }
     }
 }

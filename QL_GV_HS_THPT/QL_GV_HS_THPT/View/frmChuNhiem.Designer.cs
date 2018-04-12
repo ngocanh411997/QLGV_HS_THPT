@@ -30,10 +30,10 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCN = new System.Windows.Forms.DataGridView();
+            this.lbGVCN = new System.Windows.Forms.Label();
             this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbGVCN = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCN)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.groupBox1.Controls.Add(this.dgvCN);
             this.groupBox1.Location = new System.Drawing.Point(0, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(608, 173);
+            this.groupBox1.Size = new System.Drawing.Size(606, 173);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chủ nhiệm";
@@ -58,13 +58,22 @@
             this.dgvCN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCN.Location = new System.Drawing.Point(3, 16);
             this.dgvCN.Name = "dgvCN";
-            this.dgvCN.Size = new System.Drawing.Size(602, 154);
+            this.dgvCN.Size = new System.Drawing.Size(600, 154);
             this.dgvCN.TabIndex = 0;
+            // 
+            // lbGVCN
+            // 
+            this.lbGVCN.AutoSize = true;
+            this.lbGVCN.Location = new System.Drawing.Point(256, 27);
+            this.lbGVCN.Name = "lbGVCN";
+            this.lbGVCN.Size = new System.Drawing.Size(108, 13);
+            this.lbGVCN.TabIndex = 1;
+            this.lbGVCN.Text = "Giáo Viên Chủ Nhiệm";
             // 
             // MaGV
             // 
             this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGV.DataPropertyName = "MaGV";
+            this.MaGV.DataPropertyName = "MaGVCN";
             this.MaGV.HeaderText = "Mã GV";
             this.MaGV.Name = "MaGV";
             // 
@@ -81,15 +90,6 @@
             this.NamHoc.DataPropertyName = "NamHoc";
             this.NamHoc.HeaderText = "Năm Học";
             this.NamHoc.Name = "NamHoc";
-            // 
-            // lbGVCN
-            // 
-            this.lbGVCN.AutoSize = true;
-            this.lbGVCN.Location = new System.Drawing.Point(256, 27);
-            this.lbGVCN.Name = "lbGVCN";
-            this.lbGVCN.Size = new System.Drawing.Size(108, 13);
-            this.lbGVCN.TabIndex = 1;
-            this.lbGVCN.Text = "Giáo Viên Chủ Nhiệm";
             // 
             // frmChuNhiem
             // 
@@ -112,9 +112,9 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCN;
+        private System.Windows.Forms.Label lbGVCN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Malop;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
-        private System.Windows.Forms.Label lbGVCN;
     }
 }
