@@ -3,19 +3,19 @@ GO
 
 --Thủ tục--
 
-CREATE PROC Them_Lop(@malop varchar(10),@tenlop nvarchar(50),@magvcn varchar(10))
+ALTER PROC Them_Lop(@malop varchar(10),@tenlop nvarchar(50))
 AS
 BEGIN
-	INSERT INTO Lop(MaLop,TenLop,MaGVCN)
-	VALUES(@malop,@tenlop,@magvcn)
+	INSERT INTO Lop(MaLop,TenLop)
+	VALUES(@malop,@tenlop)
 END
 GO
-CREATE PROC Sua_Lop(@malop varchar(10),@tenlop nvarchar(50),@magvcn varchar(10))
+ALTER PROC Sua_Lop(@malop varchar(10),@tenlop nvarchar(50))
 AS
 BEGIN
 	
 	UPDATE Lop
-	SET TenLop=@tenlop,MaGVCN=@magvcn
+	SET TenLop=@tenlop
 	WHERE MaLop=@malop
 END
 
@@ -28,10 +28,11 @@ AS
  END
  
  GO
- CREATE PROC Xem_Lop
+ ALTER PROC Xem_Lop
  AS 
  BEGIN
- SELECT * FROM Lop
+ SELECT *
+ FROM Lop 
  end
  
  GO

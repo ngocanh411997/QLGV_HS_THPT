@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGVCN = new System.Windows.Forms.Button();
-            this.txtMagvcn = new System.Windows.Forms.TextBox();
-            this.lbMagvcn = new System.Windows.Forms.Label();
             this.txtTenlop = new System.Windows.Forms.TextBox();
             this.lbTenlop = new System.Windows.Forms.Label();
             this.txtMalop = new System.Windows.Forms.TextBox();
@@ -53,7 +50,6 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaGVCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
@@ -61,47 +57,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnGVCN);
-            this.groupBox1.Controls.Add(this.txtMagvcn);
-            this.groupBox1.Controls.Add(this.lbMagvcn);
             this.groupBox1.Controls.Add(this.txtTenlop);
             this.groupBox1.Controls.Add(this.lbTenlop);
             this.groupBox1.Controls.Add(this.txtMalop);
             this.groupBox1.Controls.Add(this.lbMalop);
             this.groupBox1.Location = new System.Drawing.Point(4, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 142);
+            this.groupBox1.Size = new System.Drawing.Size(333, 83);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
-            // 
-            // btnGVCN
-            // 
-            this.btnGVCN.Location = new System.Drawing.Point(237, 77);
-            this.btnGVCN.Name = "btnGVCN";
-            this.btnGVCN.Size = new System.Drawing.Size(75, 35);
-            this.btnGVCN.TabIndex = 20;
-            this.btnGVCN.Text = "Giáo Viên Chủ Nhiệm";
-            this.btnGVCN.UseVisualStyleBackColor = true;
-            this.btnGVCN.Click += new System.EventHandler(this.btnGVCN_Click);
-            // 
-            // txtMagvcn
-            // 
-            this.txtMagvcn.Location = new System.Drawing.Point(99, 85);
-            this.txtMagvcn.Name = "txtMagvcn";
-            this.txtMagvcn.Size = new System.Drawing.Size(100, 20);
-            this.txtMagvcn.TabIndex = 1;
-            this.txtMagvcn.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // lbMagvcn
-            // 
-            this.lbMagvcn.AutoSize = true;
-            this.lbMagvcn.Location = new System.Drawing.Point(29, 92);
-            this.lbMagvcn.Name = "lbMagvcn";
-            this.lbMagvcn.Size = new System.Drawing.Size(55, 13);
-            this.lbMagvcn.TabIndex = 0;
-            this.lbMagvcn.Text = "Mã GVCN";
-            this.lbMagvcn.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTenlop
             // 
@@ -142,7 +107,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvLop);
-            this.groupBox2.Location = new System.Drawing.Point(1, 261);
+            this.groupBox2.Location = new System.Drawing.Point(4, 239);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(629, 191);
             this.groupBox2.TabIndex = 1;
@@ -155,8 +120,7 @@
             this.dgvLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.MaLop,
-            this.TenLop,
-            this.MaGVCN});
+            this.TenLop});
             this.dgvLop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLop.Location = new System.Drawing.Point(3, 16);
             this.dgvLop.Name = "dgvLop";
@@ -171,7 +135,7 @@
             this.btnHuy.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(457, 194);
+            this.btnHuy.Location = new System.Drawing.Point(461, 156);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(68, 61);
             this.btnHuy.TabIndex = 15;
@@ -186,7 +150,7 @@
             this.btnLuu.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(349, 194);
+            this.btnLuu.Location = new System.Drawing.Point(353, 156);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(68, 61);
             this.btnLuu.TabIndex = 14;
@@ -201,7 +165,7 @@
             this.btnThem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(5, 194);
+            this.btnThem.Location = new System.Drawing.Point(9, 156);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 61);
             this.btnThem.TabIndex = 11;
@@ -216,7 +180,7 @@
             this.btnSua.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(119, 194);
+            this.btnSua.Location = new System.Drawing.Point(123, 156);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 61);
             this.btnSua.TabIndex = 12;
@@ -231,7 +195,7 @@
             this.btnXoa.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(238, 194);
+            this.btnXoa.Location = new System.Drawing.Point(242, 156);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(63, 61);
             this.btnXoa.TabIndex = 13;
@@ -246,7 +210,7 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(557, 194);
+            this.btnThoat.Location = new System.Drawing.Point(561, 156);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 61);
             this.btnThoat.TabIndex = 16;
@@ -260,9 +224,9 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(343, 52);
+            this.btnTimKiem.Location = new System.Drawing.Point(343, 54);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(89, 31);
+            this.btnTimKiem.Size = new System.Drawing.Size(89, 27);
             this.btnTimKiem.TabIndex = 17;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -292,7 +256,7 @@
             this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(343, 103);
+            this.btnLamMoi.Location = new System.Drawing.Point(343, 104);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(89, 26);
@@ -331,13 +295,6 @@
             this.TenLop.HeaderText = "Tên Lớp";
             this.TenLop.Name = "TenLop";
             // 
-            // MaGVCN
-            // 
-            this.MaGVCN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGVCN.DataPropertyName = "MaGVCN";
-            this.MaGVCN.HeaderText = "Mã GVCN";
-            this.MaGVCN.Name = "MaGVCN";
-            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,8 +332,6 @@
         private System.Windows.Forms.TextBox txtMalop;
         private System.Windows.Forms.Label lbMalop;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtMagvcn;
-        private System.Windows.Forms.Label lbMagvcn;
         private System.Windows.Forms.TextBox txtTenlop;
         private System.Windows.Forms.Label lbTenlop;
         private System.Windows.Forms.Button btnHuy;
@@ -389,12 +344,10 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ComboBox cbType;
-        private System.Windows.Forms.Button btnGVCN;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label lbQLL;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaGVCN;
     }
 }

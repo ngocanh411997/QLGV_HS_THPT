@@ -11,6 +11,8 @@ namespace QL_GV_HS_THPT.Entity
         private string maGV;
         private string maLop;
         private string namHoc;
+        private string tenLop;
+           
         public string MaGV
         {
             get
@@ -47,6 +49,18 @@ namespace QL_GV_HS_THPT.Entity
             set
             {
                 namHoc = value;
+            }
+        }
+        public string TenLop
+        {
+            get
+            {
+                return tenLop;
+            }
+
+            set
+            {
+                tenLop = value;
             }
         }
     }

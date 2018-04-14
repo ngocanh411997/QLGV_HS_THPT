@@ -28,10 +28,11 @@ CREATE PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@D
  END
  GO
  --Xem điểm
- CREATE PROC SP_XemDiem
+ ALTER PROC SP_XemDiem
  AS
  BEGIN
- SELECT * FROM dbo.Diem
+ SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy
+ FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon
  END
  GO 
 --Xem điểm theo môn

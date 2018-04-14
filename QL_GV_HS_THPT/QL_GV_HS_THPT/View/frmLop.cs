@@ -31,13 +31,13 @@ namespace QL_GV_HS_THPT.View
             btnThoat.Enabled = !e;
             txtMalop.Enabled = e;
             txtTenlop.Enabled = e;
-            txtMagvcn.Enabled = e;
+          
         }
         private void clearData()
         {
             txtMalop.Text = "";
             txtTenlop.Text = "";
-            txtMagvcn.Text = "";
+            
         }
         private void HienThi()
         {
@@ -64,7 +64,7 @@ namespace QL_GV_HS_THPT.View
             
                 txtMalop.Text = Convert.ToString(dgvLop.CurrentRow.Cells["MaLop"].Value);
                 txtTenlop.Text = Convert.ToString(dgvLop.CurrentRow.Cells["TenLop"].Value);
-                txtMagvcn.Text = Convert.ToString(dgvLop.CurrentRow.Cells["Magvcn"].Value);
+              
             
         }
 
@@ -111,7 +111,7 @@ namespace QL_GV_HS_THPT.View
         {
             lop.MaLop = txtMalop.Text;
             lop.TenLop = txtTenlop.Text;
-            lop.MaGVCN = txtMagvcn.Text;
+           
             if (fluu == 0)
             {
                 try
@@ -188,12 +188,6 @@ namespace QL_GV_HS_THPT.View
             {
                 dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where TenLop Like N'%" + txtTimKiem.Text.Trim() + "%'");
             }
-        }
-
-        private void btnGVCN_Click(object sender, EventArgs e)
-        {
-            frmChuNhiem frmCN = new frmChuNhiem();
-            frmCN.Show();
         }
     }
 }

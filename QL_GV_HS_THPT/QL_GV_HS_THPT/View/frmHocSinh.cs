@@ -70,14 +70,7 @@ namespace QL_GV_HS_THPT.View
         {
             dgvHocSinh.DataSource = Bus.GetData();         
         }
-//        Theo Mã HS
-//Theo Tên HS
-//Theo Lớp
-//Theo Giới Tính
-//Theo Ngày Sinh
-//Theo Dân Tộc
-//Theo Tôn Giáo
-//Theo Địa Chỉ
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (cbType.Text == "Theo Mã HS")

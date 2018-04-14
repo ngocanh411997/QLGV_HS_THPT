@@ -30,8 +30,8 @@ namespace QL_GV_HS_THPT.DAL
             SqlParameter[] para =
             {
                 new SqlParameter("MaLop",lop.MaLop),
-                new SqlParameter("TenLop",lop.TenLop),
-                new SqlParameter("MaGVCN",lop.MaGVCN)
+                new SqlParameter("TenLop",lop.TenLop)
+             
             };
             return conn.ExcuteSQL("Them_Lop", para);
         }
@@ -40,8 +40,8 @@ namespace QL_GV_HS_THPT.DAL
             SqlParameter[] para =
             {
                  new SqlParameter("MaLop",lop.MaLop),
-                 new SqlParameter("TenLop", lop.TenLop),
-                 new SqlParameter("MaGVCN", lop.MaGVCN)
+                 new SqlParameter("TenLop", lop.TenLop)
+               
         };
             return conn.ExcuteSQL("Sua_Lop", para);
         }
@@ -52,7 +52,7 @@ namespace QL_GV_HS_THPT.DAL
         }
         public string TangMa()
         {
-            return conn.TangMa(" SELECT * FROM Lop", "MaLop");
+            return conn.TangMa(" SELECT * FROM Lop", "ML");
         }
         public DataTable TimKiemLop(string str)
         {

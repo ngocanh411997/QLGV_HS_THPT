@@ -10,19 +10,20 @@ namespace QL_GV_HS_THPT.Entity
     {
         public string MaLop { get; set; }
         public string TenLop { get; set; }
-        public string MaGVCN { get; set; }
+        
+      
 
         public LopEntity()
         {
             MaLop = "";
             TenLop = "";
-            MaGVCN = "";
+         
         }
-        public LopEntity(string _MaLop, string _TenLop, string _MaGVCN)
+        public LopEntity(string _MaLop, string _TenLop)
         {
             MaLop = _MaLop;
             TenLop = _TenLop;
-            MaGVCN = _MaGVCN;
+         
         }
 
     }

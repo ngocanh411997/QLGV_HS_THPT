@@ -3,7 +3,6 @@ C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\D
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\Debug\QL_GV_HS_THPT.pdb
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.csprojResolveAssemblyReference.cache
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.Properties.Resources.resources
-C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmChuNhiem.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmDangNhap.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.frmDiem.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmDSChuNhiem.resources
@@ -13,7 +12,6 @@ C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\D
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmMain.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmQLChuNhiem.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmQuanLyChung.resources
-C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmThemChuNhiem.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmXemDiem.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.csproj.GenerateResource.Cache
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.exe

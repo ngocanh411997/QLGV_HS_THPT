@@ -17,6 +17,7 @@ namespace QL_GV_HS_THPT.Entity
         public float Diem1Tiet { get; set; }
         public float DiemHocKy { get; set; }
         public float TrungBinh { get; set; }
+        public string TenMon { get; set; }
 
         public Diem()
         {
@@ -27,9 +28,10 @@ namespace QL_GV_HS_THPT.Entity
             Diem1Tiet = 0;
             DiemHocKy = 0;
             TrungBinh = 0;
+            TenMon = "";
         }
 
-        public Diem(string mahs, string mamon, float diemmieng, float diem15p, float diem1tiet, float diemhocky,float trungbinh)
+        public Diem(string mahs, string mamon, float diemmieng, float diem15p, float diem1tiet, float diemhocky,float trungbinh,string tenmon)
         {
             this.MaHS = mahs;
             this.MaMon = mamon;
@@ -38,6 +40,7 @@ namespace QL_GV_HS_THPT.Entity
             this.Diem1Tiet = diem1tiet;
             this.DiemHocKy = diemhocky;
             this.TrungBinh = trungbinh;
+            this.TenMon = tenmon;
         }
 
 

@@ -19,7 +19,7 @@ namespace QL_GV_HS_THPT.DAL
         }
         public DataTable GetDataCN()
         {
-            return conn.GetData("Xem_GVCN", null);
+            return conn.GetData("GV_SelectAll", null);
         }
         public DataTable GetListMaLop()
         {

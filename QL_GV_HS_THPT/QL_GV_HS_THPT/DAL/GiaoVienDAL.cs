@@ -63,5 +63,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.TangMa("Select * From GiaoVien", "GV");
         }
+        public DataTable TimKiemGV(string str)
+        {
+            return conn.GetData(str);
+        }
     }
 }

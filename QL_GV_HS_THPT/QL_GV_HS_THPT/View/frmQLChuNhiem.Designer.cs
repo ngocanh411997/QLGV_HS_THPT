@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLChuNhiem));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCN = new System.Windows.Forms.DataGridView();
-            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -48,6 +45,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCN)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,8 +69,10 @@
             // 
             this.dgvCN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
             this.MaGV,
-            this.Malop,
+            this.TenGV,
+            this.TenLop,
             this.NamHoc});
             this.dgvCN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCN.Location = new System.Drawing.Point(3, 16);
@@ -76,27 +80,7 @@
             this.dgvCN.Size = new System.Drawing.Size(636, 281);
             this.dgvCN.TabIndex = 0;
             this.dgvCN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCN_CellClick);
-            // 
-            // MaGV
-            // 
-            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGV.DataPropertyName = "MaGV";
-            this.MaGV.HeaderText = "Mã GV";
-            this.MaGV.Name = "MaGV";
-            // 
-            // Malop
-            // 
-            this.Malop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Malop.DataPropertyName = "MaLop";
-            this.Malop.HeaderText = "Mã Lớp";
-            this.Malop.Name = "Malop";
-            // 
-            // NamHoc
-            // 
-            this.NamHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NamHoc.DataPropertyName = "NamHoc";
-            this.NamHoc.HeaderText = "Năm Học";
-            this.NamHoc.Name = "NamHoc";
+            this.dgvCN.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvCN_RowPrePaint);
             // 
             // btnThoat
             // 
@@ -270,6 +254,38 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin giáo viên chủ nhiệm";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaGV
+            // 
+            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGV.DataPropertyName = "MaGV";
+            this.MaGV.HeaderText = "Mã GV";
+            this.MaGV.Name = "MaGV";
+            // 
+            // TenGV
+            // 
+            this.TenGV.DataPropertyName = "TenGV";
+            this.TenGV.HeaderText = "Tên GV";
+            this.TenGV.Name = "TenGV";
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            // 
+            // NamHoc
+            // 
+            this.NamHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NamHoc.DataPropertyName = "NamHoc";
+            this.NamHoc.HeaderText = "Năm Học";
+            this.NamHoc.Name = "NamHoc";
+            // 
             // frmQLChuNhiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,9 +314,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Malop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
@@ -315,5 +328,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbMaGV;
         private System.Windows.Forms.ComboBox cbMaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
     }
 }

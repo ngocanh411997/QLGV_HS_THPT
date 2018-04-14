@@ -47,8 +47,8 @@ namespace QL_GV_HS_THPT.View
         {
             DataTable dt = new DataTable();
             dt = Bus.GetListMaLop();
-            cbMaLop.DataSource = dt.Copy();
-            cbMaLop.DisplayMember = "MaLop";
+            cbMaLop.DataSource = dt;
+            cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
 
         }
@@ -66,7 +66,7 @@ namespace QL_GV_HS_THPT.View
         {
             this.ShowMaGV();
             this.ShowMaLop();
-            dgvCN.DataSource = Bus.GetDaTaCN();
+            dgvCN.DataSource = Bus.GVCN();
         }
 
         private void frmQLChuNhiem_Load(object sender, EventArgs e)
@@ -80,13 +80,13 @@ namespace QL_GV_HS_THPT.View
             if (fluu == 0)
             {
                 // txtMaGV.Text = Convert.ToString(dgvCN.CurrentRow.Cells["MaGV"].Value);
-                cbMaLop.Text = Convert.ToString(dgvCN.CurrentRow.Cells["MaLop"].Value);
+                cbMaLop.Text = Convert.ToString(dgvCN.CurrentRow.Cells["TenLop"].Value);
                 txtNamHoc.Text = Convert.ToString(dgvCN.CurrentRow.Cells["NamHoc"].Value);
             }
             else
             {
                 cbMaGV.Text = Convert.ToString(dgvCN.CurrentRow.Cells["MaGV"].Value);
-                cbMaLop.Text = Convert.ToString(dgvCN.CurrentRow.Cells["MaLop"].Value);
+                cbMaLop.Text = Convert.ToString(dgvCN.CurrentRow.Cells["TenLop"].Value);
                 txtNamHoc.Text = Convert.ToString(dgvCN.CurrentRow.Cells["NamHoc"].Value);
             }
         }
@@ -121,7 +121,7 @@ namespace QL_GV_HS_THPT.View
         {
 
             gv.MaGV = cbMaGV.Text;
-            gv.MaLop = cbMaLop.Text;
+            gv.MaLop = cbMaLop.SelectedValue.ToString();
             gv.NamHoc = txtNamHoc.Text;
             if (fluu == 0)
             {
@@ -153,7 +153,7 @@ namespace QL_GV_HS_THPT.View
                
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi" );
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
             }
@@ -185,6 +185,11 @@ namespace QL_GV_HS_THPT.View
         {
             fluu = 1;
             DisEnl(true);
+        }
+
+        private void dgvCN_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            dgvCN.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
     }
 }

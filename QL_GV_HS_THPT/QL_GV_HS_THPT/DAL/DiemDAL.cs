@@ -62,5 +62,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.TangMa("Select * From Diem", "HS");
         }
+        public DataTable GetListMon()
+        {
+            return conn.GetData("MonHoc_SelectAll ", null);
+        }
     }
 }

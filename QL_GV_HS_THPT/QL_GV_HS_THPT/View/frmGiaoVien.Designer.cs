@@ -76,7 +76,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTimKiem.Location = new System.Drawing.Point(467, 5);
+            this.txtTimKiem.Location = new System.Drawing.Point(465, 12);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(217, 25);
@@ -87,7 +87,7 @@
             this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(850, 5);
+            this.btnLamMoi.Location = new System.Drawing.Point(850, 13);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(95, 26);
@@ -102,7 +102,7 @@
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(346, 5);
+            this.btnTimKiem.Location = new System.Drawing.Point(357, 13);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(102, 26);
@@ -194,12 +194,15 @@
             this.cmbTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbTimKiem.FormattingEnabled = true;
             this.cmbTimKiem.Items.AddRange(new object[] {
-            "Mã Phòng Ban",
-            "Tên Phòng Ban",
-            "Mã Trưởng Phòng",
+            "Mã Giáo Viên",
+            "Tên Giáo Viên",
+            "Mã Môn Học",
+            "Giới Tính",
+            "Ngày Sinh",
             "Địa Chỉ",
-            "Số Điện Thoại"});
-            this.cmbTimKiem.Location = new System.Drawing.Point(703, 6);
+            "SĐT",
+            "Lương"});
+            this.cmbTimKiem.Location = new System.Drawing.Point(711, 13);
             this.cmbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTimKiem.Name = "cmbTimKiem";
             this.cmbTimKiem.Size = new System.Drawing.Size(133, 25);

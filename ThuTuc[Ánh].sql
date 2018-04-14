@@ -67,4 +67,45 @@ CREATE PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph F
  SELECT NV.MaNV,NV.HoTen,NV.DanToc,NV.GioiTinh,NV.SDT,NV.QueQuan,NV.NgaySinh,NV.MaTDHV,PB.TenPB,NV.BacLuong FROM dbo.NhanVien NV, dbo.PhongBan PB 
 
  GO
+
+ -- 
+ GO
+ SELECT TenHS,TenLop,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy,TongKet=((DiemMieng+Diem15ph+Diem1Tiet*2+DiemHocKy*3)/7)
+ FROM dbo.HocSinh INNER JOIN dbo.Diem ON Diem.MaHS = HocSinh.MaHS
+ INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop
+ INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon
+ WHERE Diem.MaHS='HS01'
+
+ GO
+ SELECT MaHS,TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,TenLop
+ FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop
+ WHERE TenHS=''
+
+ GO
+ SELECT *
+ FROM dbo.Lop
  
+ GO 
+ SELECT TenGV,TenLop,NamHoc
+ FROM dbo.GiaoVien INNER JOIN dbo.ChuNhiem
+ ON ChuNhiem.MaGV = GiaoVien.MaGV INNER JOIN dbo.Lop ON Lop.MaGVCN = GiaoVien.MaGV
+
+ --
+ GO
+ ALTER PROC  [dbo].[Xem_GVCN]
+ AS
+ BEGIN
+ SELECT ChuNhiem.MaGV,TenGV,TenLop,NamHoc
+ FROM ChuNhiem INNER JOIN dbo.GiaoVien ON GiaoVien.MaGV = ChuNhiem.MaGV INNER JOIN dbo.Lop ON Lop.MaLop = ChuNhiem.MaLop
+ 
+ END
+ --GO
+ALTER PROC [dbo].[SP_SelectMaLop]
+AS
+BEGIN
+	SELECT MaLop
+	FROM Lop
+END
+--
+ALTER TABLE dbo.Lop
+DROP COLUMN MaGVCN

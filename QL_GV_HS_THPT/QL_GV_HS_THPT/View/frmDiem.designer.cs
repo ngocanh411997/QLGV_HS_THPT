@@ -49,7 +49,6 @@
             this.txtDiem1Tiet = new System.Windows.Forms.TextBox();
             this.txtDiem15p = new System.Windows.Forms.TextBox();
             this.txtDiemMieng = new System.Windows.Forms.TextBox();
-            this.txtMaMon = new System.Windows.Forms.TextBox();
             this.txtMaHS = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbMon = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -186,7 +186,7 @@
             this.cbType.FormattingEnabled = true;
             this.cbType.Items.AddRange(new object[] {
             "Theo Mã Học Sinh",
-            "Theo Mã Môn",
+            "Theo Môn",
             "Theo Điểm Miệng",
             "Theo Điểm 15 Phút",
             "Theo Điểm 1 Tiết",
@@ -248,12 +248,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbMon);
             this.groupBox1.Controls.Add(this.txtDiemHocKy);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtDiem1Tiet);
             this.groupBox1.Controls.Add(this.txtDiem15p);
             this.groupBox1.Controls.Add(this.txtDiemMieng);
-            this.groupBox1.Controls.Add(this.txtMaMon);
             this.groupBox1.Controls.Add(this.txtMaHS);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
@@ -303,13 +303,6 @@
             this.txtDiemMieng.Name = "txtDiemMieng";
             this.txtDiemMieng.Size = new System.Drawing.Size(180, 20);
             this.txtDiemMieng.TabIndex = 8;
-            // 
-            // txtMaMon
-            // 
-            this.txtMaMon.Location = new System.Drawing.Point(115, 61);
-            this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(180, 20);
-            this.txtMaMon.TabIndex = 8;
             // 
             // txtMaHS
             // 
@@ -374,6 +367,14 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Quản Lý Điểm";
             // 
+            // cbMon
+            // 
+            this.cbMon.FormattingEnabled = true;
+            this.cbMon.Location = new System.Drawing.Point(115, 61);
+            this.cbMon.Name = "cbMon";
+            this.cbMon.Size = new System.Drawing.Size(180, 21);
+            this.cbMon.TabIndex = 18;
+            // 
             // frmDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,7 +422,6 @@
         private System.Windows.Forms.TextBox txtDiem1Tiet;
         private System.Windows.Forms.TextBox txtDiem15p;
         private System.Windows.Forms.TextBox txtDiemMieng;
-        private System.Windows.Forms.TextBox txtMaMon;
         private System.Windows.Forms.TextBox txtMaHS;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
@@ -430,5 +430,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.ComboBox cbMon;
     }
 }

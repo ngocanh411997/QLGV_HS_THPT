@@ -67,12 +67,6 @@
     <Compile Include="Entity\NguoiDung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\frmChuNhiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmChuNhiem.Designer.cs">
-      <DependentUpon>frmChuNhiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,12 +127,6 @@
     <Compile Include="View\frmQuanLyChung.Designer.cs">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmThemChuNhiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmThemChuNhiem.Designer.cs">
-      <DependentUpon>frmThemChuNhiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmXemDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,9 +142,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmChuNhiem.resx">
-      <DependentUpon>frmChuNhiem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQuanLyChung.resx">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmThemChuNhiem.resx">
-      <DependentUpon>frmThemChuNhiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmXemDiem.resx">
       <DependentUpon>frmXemDiem.cs</DependentUpon>

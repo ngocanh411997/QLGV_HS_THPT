@@ -23,6 +23,15 @@ namespace QL_GV_HS_THPT
             InitializeComponent();
 
         }
+        public void ShowMon()
+        {
+            DataTable dt = new DataTable();
+            dt = diembus.GetListMon();
+            cbMon.DataSource = dt;
+            cbMon.DisplayMember = "TenMon";
+            cbMon.ValueMember = "MaMon";
+
+        }
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -32,7 +41,7 @@ namespace QL_GV_HS_THPT
             btnLuu.Enabled = e;
             btnHuy.Enabled = e;
             txtMaHS.Enabled = e;
-            txtMaMon.Enabled = e;
+            cbMon.Enabled = e;
             txtDiemMieng.Enabled = e;
             txtDiem15p.Enabled = e;
             txtDiem1Tiet.Enabled = e;
@@ -41,7 +50,7 @@ namespace QL_GV_HS_THPT
         }
         private void clearData()
         {
-            txtMaMon.Text = "";
+            cbMon.Text = "";
             txtDiemMieng.Text = "";
             txtDiem15p.Text = "";
             txtDiem1Tiet.Text = "";
@@ -51,6 +60,7 @@ namespace QL_GV_HS_THPT
         }
         private void HienThi()
         {
+            ShowMon();
             dgvDiem.DataSource = diembus.GetData();
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -113,7 +123,7 @@ namespace QL_GV_HS_THPT
         private void btnLuu_Click(object sender, EventArgs e)
         {
             diem.MaHS = txtMaHS.Text;
-            diem.MaMon = txtMaMon.Text;
+            diem.MaMon = cbMon.SelectedValue.ToString();
             diem.DiemMieng =float.Parse(txtDiemMieng.Text);
             diem.Diem15p = float.Parse(txtDiem15p.Text);
             diem.Diem1Tiet = float.Parse(txtDiem1Tiet.Text);
@@ -168,7 +178,7 @@ namespace QL_GV_HS_THPT
         private void dgvDiem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaHS.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["MaHS"].Value);
-            txtMaMon.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["MaMon"].Value);
+            cbMon.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["TenMon"].Value);
             txtDiemMieng.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemMieng"].Value);
             txtDiem15p.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem15ph"].Value);
             txtDiem1Tiet.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem1Tiet"].Value);
@@ -180,27 +190,27 @@ namespace QL_GV_HS_THPT
         {
             if (cbType.Text=="Theo Mã Học Sinh")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where MaHS like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where MaHS like '%" + txtTimKiem.Text + "%'");
             }
-            if (cbType.Text == "Theo Mã Môn")
+            if (cbType.Text == "Theo Môn")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where MaMon like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where TenMon like N'%" + txtTimKiem.Text + "%'");
             }
             if (cbType.Text == "Theo Điểm Miệng")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where DiemMieng like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where DiemMieng like '%" + txtTimKiem.Text + "%'");
             }
             if (cbType.Text == "Theo Điểm 15 phút")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where Diem15ph like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where Diem15ph like '%" + txtTimKiem.Text + "%'");
             }
             if (cbType.Text == "Theo Điểm 1 Tiết")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where Diem1Tiet like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where Diem1Tiet like '%" + txtTimKiem.Text + "%'");
             }
             if (cbType.Text == "Theo Điểm Học Kỳ")
             {
-                dgvDiem.DataSource = diembus.TimKiem("select * from diem where DiemHocKy like '%" + txtTimKiem.Text + "%'");
+                dgvDiem.DataSource = diembus.TimKiem("SELECT MaHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon where DiemHocKy like '%" + txtTimKiem.Text + "%'");
             }
         }
     }

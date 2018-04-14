@@ -196,10 +196,41 @@ namespace QL_GV_HS_THPT.View
             txtTimKiem.Text = "";
             cmbTimKiem.Text = "";
         }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            if (cmbTimKiem.Text == "Mã Giáo Viên")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE MaGV LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Tên Giáo Viên")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE TenGV LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Mã Môn Học")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE MaMon LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Giới Tính")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE GioiTinh LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Ngày Sinh")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE NgaySinh LIKE '%" + txtTimKiem.Text.Trim() + "%'");
 
+            }
+            if (cmbTimKiem.Text == "Địa Chỉ")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE DiaChi LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "SĐT")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE SDT LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Lương")
+            {
+                dgvGiaoVien.DataSource = Bus.TimKiemGV("SELECT * FROM dbo.GiaoVien WHERE Luong LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
         }
 
         private void btnXemDSCN_Click(object sender, EventArgs e)
