@@ -179,17 +179,15 @@ namespace QL_GV_HS_THPT.View
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            txtTimKiem.Enabled = true;
-            cbType.Enabled = true;
-            if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim().Length > 50)
+        { 
+            if (cbType.Text == "Theo mã lớp")
             {
-                MessageBox.Show("Lỗi Từ khóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where MaLop Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
-            dgvLop.Refresh();
-            dgvLop.DataSource = LopDAL.TimKiem(cbType.SelectedIndex, txtTimKiem.Text.Trim());
-
+            if (cbType.Text == "Theo tên lớp")
+            {
+                dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where TenLop Like N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
         }
 
         private void btnGVCN_Click(object sender, EventArgs e)

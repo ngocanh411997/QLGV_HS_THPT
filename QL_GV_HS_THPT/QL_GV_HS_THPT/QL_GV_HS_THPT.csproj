@@ -55,7 +55,6 @@
     <Compile Include="DAL\ChuNhiemDAL.cs" />
     <Compile Include="DAL\DiemDAL.cs" />
     <Compile Include="DAL\GiaoVienDAL.cs" />
-    <Compile Include="DAL\Helper.cs" />
     <Compile Include="DAL\HocSinhDAL.cs" />
     <Compile Include="DAL\KetNoi.cs" />
     <Compile Include="DAL\LopDAL.cs" />

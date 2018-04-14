@@ -62,27 +62,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.GetData("Lop_SelectAll ", null);
         }
-        public static List<HocSinhEntity> TimKiem(int type, string TuKhoa)
+       public DataTable TimKiemHS(string TimKiem)
         {
-            string query = "";
-            KetNoi conn = new KetNoi();
-            switch (type)
-            {
-                case 0:
-                    query = string.Format("SELECT * FROM dbo.HocSinh WHERE MaHS LIKE '%{0}%'", TuKhoa);
-                    return Helper.ToListof<HocSinhEntity>(conn.GetData(query));
-                case 1:
-
-                    query = string.Format("SELECT * FROM dbo.HocSinh WHERE TenHS LIKE N'%{0}%'", TuKhoa);
-                    return Helper.ToListof<HocSinhEntity>(conn.GetData(query));
-                case 2:
-                    query = string.Format(" SELECT * FROM dbo.HocSinh HS, dbo.Lop L WHERE HS.MaLop = L.MaLop AND L.TenLop LIKE '%{0}%'", TuKhoa);
-                    return Helper.ToListof<HocSinhEntity>(conn.GetData(query));
-                case 3:
-                    query = string.Format("SELECT * FROM dbo.HocSinh WHERE DiaChi LIKE N'%{0}%'", TuKhoa);
-                    return Helper.ToListof<HocSinhEntity>(conn.GetData(query));
-            }
-            return Helper.ToListof<HocSinhEntity>(conn.GetData("SELECT MaHS,TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop"));
+            return conn.GetData(TimKiem);
         }
     }
 }

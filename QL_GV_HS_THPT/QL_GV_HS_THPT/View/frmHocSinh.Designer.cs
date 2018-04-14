@@ -102,10 +102,14 @@
             "Theo Mã HS",
             "Theo Tên HS",
             "Theo Lớp",
+            "Theo Giới Tính",
+            "Theo Ngày Sinh(năm-tháng-ngày)",
+            "Theo Dân Tộc",
+            "Theo Tôn Giáo",
             "Theo Địa Chỉ"});
-            this.cbType.Location = new System.Drawing.Point(205, 24);
+            this.cbType.Location = new System.Drawing.Point(160, 24);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(92, 21);
+            this.cbType.Size = new System.Drawing.Size(137, 21);
             this.cbType.TabIndex = 4;
             // 
             // txtDiaChi
@@ -200,7 +204,7 @@
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(19, 25);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(180, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(135, 20);
             this.txtTimKiem.TabIndex = 2;
             // 
             // btnTimKiem

@@ -54,22 +54,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.TangMa(" SELECT * FROM Lop", "MaLop");
         }
-        public static List<LopEntity> TimKiem(int type, string TuKhoa)
+        public DataTable TimKiemLop(string str)
         {
-            string query = "";
-            KetNoi conn = new KetNoi();
-            switch (type)
-            {
-                case 0:
-                    query = string.Format("SELECT * FROM dbo.Lop WHERE MaLop LIKE '%{0}%'", TuKhoa);
-                    return Helper.ToListof<LopEntity>(conn.GetData(query));
-                case 1:
-
-                    query = string.Format("SELECT * FROM dbo.Lop WHERE TenLop LIKE N'%{0}%'", TuKhoa);
-                    return Helper.ToListof<LopEntity>(conn.GetData(query));
-             
-            }
-            return Helper.ToListof<LopEntity>(conn.GetData("SELECT * from dbo.Lop"));
+            return conn.GetData(str);
         }
 
     }

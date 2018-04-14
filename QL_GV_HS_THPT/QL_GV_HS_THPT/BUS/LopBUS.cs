@@ -40,5 +40,9 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.TangMa();
         }
+        public DataTable TimKiemLop(string str)
+        {
+            return da.TimKiemLop(str);
+        }
     }
 }
