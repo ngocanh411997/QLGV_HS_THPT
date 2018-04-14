@@ -20,9 +20,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.GetData(str);
         }
-        public DataTable XemDiemHS()
+        public DataTable XemDiemHS(string str)
         {
-            return conn.GetData("SP_XemDiemHS");
+            return conn.GetData(str);
         }
         public int ThemDiem(Diem diem)
         {

@@ -1,18 +1,18 @@
 ﻿---- Thủ Tục ----
 go
-CREATE Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+ALTER Proc ThemHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 insert into HocSinh(MaHS, TenHS,GioiTinh,NgaySinh,DiaChi,DanToc,TonGiao,MaLop)
-values (@MaLop, @TenHS, @GioiTinh, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop)
+values (@MaHS, @TenHS, @GioiTinh, @NgaySinh, @DiaChi, @DanToc, @TonGiao, @MaLop)
 END
 -- sửa học sinh
 go
-CREATE Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
+ALTER Proc SuaHS(@MaHS varchar(10), @TenHS nvarchar(50), @GioiTinh NVARCHAR(5), @NgaySinh date, @DiaChi nvarchar(150), @DanToc nvarchar(50), @TonGiao nvarchar(50), @MaLop VARCHAR(10))
 As
 Begin
 Update HocSinh
-Set MaHS=@MaHS,TenHS=@TenHS,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,DanToc=@DanToc,TonGiao=@TonGiao,MaLop=@MaLop
+Set TenHS=@TenHS,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,DanToc=@DanToc,TonGiao=@TonGiao,MaLop=@MaLop
 WHERE MaHS=@MaHS
 end
 

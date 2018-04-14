@@ -217,15 +217,29 @@ namespace QL_GV_HS_THPT.View
 
         private void dgvHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["MaHS"].Value);
-            txtTenHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenHS"].Value);
-            cbMaLop.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenLop"].Value);
-            dtNgaySinh.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["NgaySinh"].Value);
-            txtDanToc.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DanToc"].Value);
-            txtTonGiao.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TonGiao"].Value);
-            txtDiaChi.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DiaChi"].Value);
-            if (dgvHocSinh.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
-            else radNu.Checked = true;         
+            if(fluu==0)
+            {
+                txtTenHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenHS"].Value);
+                cbMaLop.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenLop"].Value);
+                dtNgaySinh.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["NgaySinh"].Value);
+                txtDanToc.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DanToc"].Value);
+                txtTonGiao.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TonGiao"].Value);
+                txtDiaChi.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DiaChi"].Value);
+                if (dgvHocSinh.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
+                else radNu.Checked = true;
+            }else
+            {
+                txtMaHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["MaHS"].Value);
+                txtTenHS.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenHS"].Value);
+                cbMaLop.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TenLop"].Value);
+                dtNgaySinh.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["NgaySinh"].Value);
+                txtDanToc.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DanToc"].Value);
+                txtTonGiao.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["TonGiao"].Value);
+                txtDiaChi.Text = Convert.ToString(dgvHocSinh.CurrentRow.Cells["DiaChi"].Value);
+                if (dgvHocSinh.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
+                else radNu.Checked = true;
+            }
+            
         }
 
         private void dgvHocSinh_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -235,7 +249,7 @@ namespace QL_GV_HS_THPT.View
 
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
-            frmXemDiem xemdiem = new frmXemDiem();
+            frmXemDiem xemdiem = new frmXemDiem(txtMaHS.Text);
             xemdiem.Show();
             //this.Close();
         }

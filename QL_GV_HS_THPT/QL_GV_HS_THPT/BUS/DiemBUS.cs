@@ -20,9 +20,9 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.TimKiem(str);
         }
-        public DataTable XemDiemHS()
+        public DataTable XemDiemHS(string str)
         {
-            return da.XemDiemHS();
+            return da.XemDiemHS(str);
         }
         public int ThemDiem(Diem diem)
         {
