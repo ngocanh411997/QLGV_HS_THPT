@@ -44,6 +44,7 @@
             this.dgvDiem = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMon = new System.Windows.Forms.ComboBox();
             this.txtDiemHocKy = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDiem1Tiet = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbMon = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -267,6 +267,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin điểm";
             // 
+            // cbMon
+            // 
+            this.cbMon.FormattingEnabled = true;
+            this.cbMon.Location = new System.Drawing.Point(115, 61);
+            this.cbMon.Name = "cbMon";
+            this.cbMon.Size = new System.Drawing.Size(180, 21);
+            this.cbMon.TabIndex = 18;
+            // 
             // txtDiemHocKy
             // 
             this.txtDiemHocKy.Location = new System.Drawing.Point(115, 213);
@@ -367,19 +375,11 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Quản Lý Điểm";
             // 
-            // cbMon
-            // 
-            this.cbMon.FormattingEnabled = true;
-            this.cbMon.Location = new System.Drawing.Point(115, 61);
-            this.cbMon.Name = "cbMon";
-            this.cbMon.Size = new System.Drawing.Size(180, 21);
-            this.cbMon.TabIndex = 18;
-            // 
             // frmDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1044, 526);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

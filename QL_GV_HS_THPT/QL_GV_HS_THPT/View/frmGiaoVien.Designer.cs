@@ -90,7 +90,7 @@
             this.btnLamMoi.Location = new System.Drawing.Point(850, 13);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(95, 26);
+            this.btnLamMoi.Size = new System.Drawing.Size(100, 26);
             this.btnLamMoi.TabIndex = 15;
             this.btnLamMoi.Text = "Làm Mới ";
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,10 +102,10 @@
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(357, 13);
+            this.btnTimKiem.Location = new System.Drawing.Point(351, 13);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(102, 26);
+            this.btnTimKiem.Size = new System.Drawing.Size(108, 26);
             this.btnTimKiem.TabIndex = 16;
             this.btnTimKiem.Text = "Tìm Kiếm: ";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -426,12 +426,13 @@
             // 
             // tnThongTin
             // 
+            this.tnThongTin.BackColor = System.Drawing.Color.SeaGreen;
             this.tnThongTin.Location = new System.Drawing.Point(60, 371);
             this.tnThongTin.Name = "tnThongTin";
             this.tnThongTin.Size = new System.Drawing.Size(215, 32);
             this.tnThongTin.TabIndex = 6;
             this.tnThongTin.Text = "Thông Tin Chủ Nhiệm";
-            this.tnThongTin.UseVisualStyleBackColor = true;
+            this.tnThongTin.UseVisualStyleBackColor = false;
             this.tnThongTin.Click += new System.EventHandler(this.btnXemDSCN_Click);
             // 
             // dpNgaySinh
@@ -507,6 +508,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1058, 436);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnLamMoi);

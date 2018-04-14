@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLChuNhiem));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCN = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -45,11 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCN)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,9 +59,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvCN);
-            this.groupBox1.Location = new System.Drawing.Point(345, 60);
+            this.groupBox1.Location = new System.Drawing.Point(345, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(642, 300);
+            this.groupBox1.Size = new System.Drawing.Size(642, 294);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chủ nhiệm";
@@ -77,17 +78,49 @@
             this.dgvCN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCN.Location = new System.Drawing.Point(3, 16);
             this.dgvCN.Name = "dgvCN";
-            this.dgvCN.Size = new System.Drawing.Size(636, 281);
+            this.dgvCN.Size = new System.Drawing.Size(636, 275);
             this.dgvCN.TabIndex = 0;
             this.dgvCN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCN_CellClick);
             this.dgvCN.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvCN_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaGV
+            // 
+            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGV.DataPropertyName = "MaGV";
+            this.MaGV.HeaderText = "Mã GV";
+            this.MaGV.Name = "MaGV";
+            // 
+            // TenGV
+            // 
+            this.TenGV.DataPropertyName = "TenGV";
+            this.TenGV.HeaderText = "Tên GV";
+            this.TenGV.Name = "TenGV";
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            // 
+            // NamHoc
+            // 
+            this.NamHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NamHoc.DataPropertyName = "NamHoc";
+            this.NamHoc.HeaderText = "Năm Học";
+            this.NamHoc.Name = "NamHoc";
             // 
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(889, 11);
+            this.btnThoat.Location = new System.Drawing.Point(890, 35);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(69, 44);
@@ -103,7 +136,7 @@
             this.btnHuy.Enabled = false;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(791, 11);
+            this.btnHuy.Location = new System.Drawing.Point(792, 35);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(69, 44);
@@ -119,7 +152,7 @@
             this.btnLuu.Enabled = false;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(698, 11);
+            this.btnLuu.Location = new System.Drawing.Point(699, 35);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(69, 44);
@@ -134,7 +167,7 @@
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(597, 11);
+            this.btnXoa.Location = new System.Drawing.Point(598, 35);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(69, 44);
@@ -149,7 +182,7 @@
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(493, 11);
+            this.btnSua.Location = new System.Drawing.Point(494, 35);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(69, 44);
@@ -164,7 +197,7 @@
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(393, 11);
+            this.btnThem.Location = new System.Drawing.Point(394, 35);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(69, 44);
@@ -183,9 +216,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 11);
+            this.panel1.Location = new System.Drawing.Point(3, 96);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 343);
+            this.panel1.Size = new System.Drawing.Size(336, 294);
             this.panel1.TabIndex = 37;
             // 
             // cbMaLop
@@ -254,43 +287,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin giáo viên chủ nhiệm";
             // 
-            // STT
+            // label5
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaGV
-            // 
-            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGV.DataPropertyName = "MaGV";
-            this.MaGV.HeaderText = "Mã GV";
-            this.MaGV.Name = "MaGV";
-            // 
-            // TenGV
-            // 
-            this.TenGV.DataPropertyName = "TenGV";
-            this.TenGV.HeaderText = "Tên GV";
-            this.TenGV.Name = "TenGV";
-            // 
-            // TenLop
-            // 
-            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
-            // 
-            // NamHoc
-            // 
-            this.NamHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NamHoc.DataPropertyName = "NamHoc";
-            this.NamHoc.HeaderText = "Năm Học";
-            this.NamHoc.Name = "NamHoc";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(8, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(293, 31);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Giáo Viên Chủ Nhiệm";
             // 
             // frmQLChuNhiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 360);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(989, 402);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnHuy);
@@ -307,6 +321,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -333,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
+        private System.Windows.Forms.Label label5;
     }
 }

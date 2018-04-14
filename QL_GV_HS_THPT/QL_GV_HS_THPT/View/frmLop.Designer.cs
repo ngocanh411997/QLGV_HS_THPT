@@ -36,6 +36,9 @@
             this.lbMalop = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLop = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.cbType = new System.Windows.Forms.ComboBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lbQLL = new System.Windows.Forms.Label();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.lbMalop);
             this.groupBox1.Location = new System.Drawing.Point(4, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 83);
+            this.groupBox1.Size = new System.Drawing.Size(234, 83);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
@@ -109,7 +109,7 @@
             this.groupBox2.Controls.Add(this.dgvLop);
             this.groupBox2.Location = new System.Drawing.Point(4, 239);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(629, 191);
+            this.groupBox2.Size = new System.Drawing.Size(581, 191);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách lớp";
@@ -124,10 +124,30 @@
             this.dgvLop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLop.Location = new System.Drawing.Point(3, 16);
             this.dgvLop.Name = "dgvLop";
-            this.dgvLop.Size = new System.Drawing.Size(623, 172);
+            this.dgvLop.Size = new System.Drawing.Size(575, 172);
             this.dgvLop.TabIndex = 0;
             this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
             this.dgvLop.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvLop_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaLop
+            // 
+            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
             // 
             // btnHuy
             // 
@@ -135,7 +155,7 @@
             this.btnHuy.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(461, 156);
+            this.btnHuy.Location = new System.Drawing.Point(382, 156);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(68, 61);
             this.btnHuy.TabIndex = 15;
@@ -150,7 +170,7 @@
             this.btnLuu.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(353, 156);
+            this.btnLuu.Location = new System.Drawing.Point(288, 156);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(68, 61);
             this.btnLuu.TabIndex = 14;
@@ -180,7 +200,7 @@
             this.btnSua.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(123, 156);
+            this.btnSua.Location = new System.Drawing.Point(103, 156);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 61);
             this.btnSua.TabIndex = 12;
@@ -195,7 +215,7 @@
             this.btnXoa.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(242, 156);
+            this.btnXoa.Location = new System.Drawing.Point(195, 156);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(63, 61);
             this.btnXoa.TabIndex = 13;
@@ -210,7 +230,7 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(561, 156);
+            this.btnThoat.Location = new System.Drawing.Point(478, 156);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 61);
             this.btnThoat.TabIndex = 16;
@@ -224,7 +244,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(343, 54);
+            this.btnTimKiem.Location = new System.Drawing.Point(301, 52);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(89, 27);
             this.btnTimKiem.TabIndex = 17;
@@ -235,7 +255,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(446, 58);
+            this.txtTimKiem.Location = new System.Drawing.Point(404, 56);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(181, 20);
             this.txtTimKiem.TabIndex = 18;
@@ -246,7 +266,7 @@
             this.cbType.Items.AddRange(new object[] {
             "Theo mã lớp",
             "Theo tên lớp"});
-            this.cbType.Location = new System.Drawing.Point(446, 108);
+            this.cbType.Location = new System.Drawing.Point(404, 106);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(181, 21);
             this.cbType.TabIndex = 19;
@@ -256,7 +276,7 @@
             this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(343, 104);
+            this.btnLamMoi.Location = new System.Drawing.Point(301, 103);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(89, 26);
@@ -275,32 +295,12 @@
             this.lbQLL.TabIndex = 21;
             this.lbQLL.Text = "Quản Lý Lớp";
             // 
-            // STT
-            // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaLop
-            // 
-            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.Name = "MaLop";
-            // 
-            // TenLop
-            // 
-            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
-            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(631, 453);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(598, 453);
             this.Controls.Add(this.lbQLL);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.cbType);
