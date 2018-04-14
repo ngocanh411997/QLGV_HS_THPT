@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace QL_GV_HS_THPT.BUS
 {
-    public class HocSinhBUS
+    public class MonHocBUS
     {
-        HocSinhDAL da = new HocSinhDAL();
+        MonHocDAL da = new MonHocDAL();
         public DataTable GetData()
         {
             return da.GetData();
@@ -20,25 +20,21 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.TangMa();
         }
-        public int InsertData(HocSinhEntity HS)
+        public int InsertData(MonHocEntity MH)
         {
-            return da.InsertData(HS);
+            return da.InsertData(MH);
         }
-        public int UpdateData(HocSinhEntity HS)
+        public int UpdateData(MonHocEntity MH)
         {
-            return da.UpdateData(HS);
+            return da.UpdateData(MH);
         }
         public int DeleteData(String ID)
         {
             return da.DeleteData(ID);
         }
-        public DataTable GetListLop()
+        public DataTable TimKiemMH(string TimKiem)
         {
-            return da.GetListLop();
-        }
-        public DataTable TimKiemHS(string TimKiem)
-        {
-            return da.TimKiemHS(TimKiem);
+            return da.TimKiemMH(TimKiem);
         }
     }
 }

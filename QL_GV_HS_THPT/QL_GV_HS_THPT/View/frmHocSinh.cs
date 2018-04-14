@@ -11,10 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-enum GioiTinh1
-{
-    Nam,Nu
-}
+
 namespace QL_GV_HS_THPT.View
 {
     public partial class frmHocSinh : Form
@@ -54,8 +51,6 @@ namespace QL_GV_HS_THPT.View
             txtTenHS.Enabled = e;
             txtTonGiao.Enabled = e;
             cbMaLop.Enabled = e;            
-           
-
         }
         private void clearData()
         {

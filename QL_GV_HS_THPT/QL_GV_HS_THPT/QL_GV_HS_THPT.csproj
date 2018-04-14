@@ -51,6 +51,7 @@
     <Compile Include="BUS\GiaoVienBus.cs" />
     <Compile Include="BUS\HocSinhBUS.cs" />
     <Compile Include="BUS\LopBUS.cs" />
+    <Compile Include="BUS\MonHocBUS.cs" />
     <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="DAL\ChuNhiemDAL.cs" />
     <Compile Include="DAL\DiemDAL.cs" />
@@ -58,12 +59,14 @@
     <Compile Include="DAL\HocSinhDAL.cs" />
     <Compile Include="DAL\KetNoi.cs" />
     <Compile Include="DAL\LopDAL.cs" />
+    <Compile Include="DAL\MonHocDAL.cs" />
     <Compile Include="DAL\NguoiDungDAL.cs" />
     <Compile Include="Entity\ChuNhiemEntity.cs" />
     <Compile Include="Entity\Diem.cs" />
     <Compile Include="Entity\GiaoVienEntity.cs" />
     <Compile Include="Entity\HocSinhEntity.cs" />
     <Compile Include="Entity\LopEntity.cs" />
+    <Compile Include="Entity\MonHocEntity.cs" />
     <Compile Include="Entity\NguoiDung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
