@@ -28,81 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSChuNhiem));
             this.lbDSCN = new System.Windows.Forms.Label();
-            this.dgvDSCN = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMaGV = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.dgvDSChuNhiem = new System.Windows.Forms.DataGridView();
+            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSChuNhiem)).BeginInit();
             this.SuspendLayout();
             // 
             // lbDSCN
             // 
             this.lbDSCN.AutoSize = true;
             this.lbDSCN.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDSCN.Location = new System.Drawing.Point(202, 20);
+            this.lbDSCN.Location = new System.Drawing.Point(116, 20);
             this.lbDSCN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDSCN.Name = "lbDSCN";
-            this.lbDSCN.Size = new System.Drawing.Size(196, 22);
+            this.lbDSCN.Size = new System.Drawing.Size(193, 22);
             this.lbDSCN.TabIndex = 0;
-            this.lbDSCN.Text = "Danh Sách Chủ Nhiệm";
+            this.lbDSCN.Text = "Thông Tin Chủ Nhiệm";
             // 
-            // dgvDSCN
+            // txtMaGV
             // 
-            this.dgvDSCN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSCN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaGV,
-            this.MaLop,
+            this.txtMaGV.Location = new System.Drawing.Point(120, 244);
+            this.txtMaGV.Name = "txtMaGV";
+            this.txtMaGV.Size = new System.Drawing.Size(100, 20);
+            this.txtMaGV.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mã Giáo Viên";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThoat.Location = new System.Drawing.Point(317, 215);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(69, 49);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // dgvDSChuNhiem
+            // 
+            this.dgvDSChuNhiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSChuNhiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenGV,
+            this.TenLop,
             this.NamHoc});
-            this.dgvDSCN.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvDSCN.Location = new System.Drawing.Point(0, 63);
-            this.dgvDSCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvDSCN.Name = "dgvDSCN";
-            this.dgvDSCN.RowTemplate.Height = 24;
-            this.dgvDSCN.Size = new System.Drawing.Size(554, 163);
-            this.dgvDSCN.TabIndex = 1;
+            this.dgvDSChuNhiem.Location = new System.Drawing.Point(36, 56);
+            this.dgvDSChuNhiem.Name = "dgvDSChuNhiem";
+            this.dgvDSChuNhiem.Size = new System.Drawing.Size(350, 124);
+            this.dgvDSChuNhiem.TabIndex = 9;
             // 
-            // STT
+            // TenGV
             // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
+            this.TenGV.DataPropertyName = "TenGV";
+            this.TenGV.HeaderText = "Giáo Viên";
+            this.TenGV.Name = "TenGV";
             // 
-            // MaGV
+            // TenLop
             // 
-            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGV.DataPropertyName = "MaGV";
-            this.MaGV.HeaderText = "Mã giáo viên";
-            this.MaGV.Name = "MaGV";
-            // 
-            // MaLop
-            // 
-            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã lớp";
-            this.MaLop.Name = "MaLop";
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Lớp";
+            this.TenLop.Name = "TenLop";
             // 
             // NamHoc
             // 
-            this.NamHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NamHoc.DataPropertyName = "NamHoc";
-            this.NamHoc.HeaderText = "Năm học";
+            this.NamHoc.HeaderText = "Năm Học";
             this.NamHoc.Name = "NamHoc";
             // 
             // frmDSChuNhiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 226);
-            this.Controls.Add(this.dgvDSCN);
+            this.ClientSize = new System.Drawing.Size(421, 356);
+            this.Controls.Add(this.dgvDSChuNhiem);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMaGV);
             this.Controls.Add(this.lbDSCN);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDSChuNhiem";
             this.Text = "Danh Sách Chủ Nhiệm";
             this.Load += new System.EventHandler(this.frmDSChuNhiem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSChuNhiem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,10 +135,12 @@
         #endregion
 
         private System.Windows.Forms.Label lbDSCN;
-        private System.Windows.Forms.DataGridView dgvDSCN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.TextBox txtMaGV;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.DataGridView dgvDSChuNhiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
     }
 }

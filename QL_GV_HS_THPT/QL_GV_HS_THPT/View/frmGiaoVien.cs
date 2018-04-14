@@ -185,8 +185,6 @@ namespace QL_GV_HS_THPT.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                frmMain m = new frmMain();
-                m.Show();
                 this.Close();
             }
             else
@@ -206,14 +204,8 @@ namespace QL_GV_HS_THPT.View
 
         private void btnXemDSCN_Click(object sender, EventArgs e)
         {
-            frmDSChuNhiem frmDSCN = new frmDSChuNhiem();
+            frmDSChuNhiem frmDSCN = new frmDSChuNhiem(txtMaGV.Text);
             frmDSCN.Show();
-        }
-
-        private void btnThemCN_Click(object sender, EventArgs e)
-        {
-            frmThemChuNhiem frmThemCN = new frmThemChuNhiem();
-            frmThemCN.Show();
         }
     }
 }

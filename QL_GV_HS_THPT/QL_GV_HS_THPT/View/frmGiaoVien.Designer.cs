@@ -60,8 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnThemCN = new System.Windows.Forms.Button();
-            this.btnXemDSCN = new System.Windows.Forms.Button();
+            this.tnThongTin = new System.Windows.Forms.Button();
             this.dpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtLuong = new System.Windows.Forms.TextBox();
@@ -121,7 +120,7 @@
             this.btnThoat.Location = new System.Drawing.Point(905, 59);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(69, 44);
+            this.btnThoat.Size = new System.Drawing.Size(69, 49);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -137,7 +136,7 @@
             this.btnHuy.Location = new System.Drawing.Point(807, 59);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(69, 44);
+            this.btnHuy.Size = new System.Drawing.Size(69, 49);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -153,7 +152,7 @@
             this.btnLuu.Location = new System.Drawing.Point(714, 59);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(69, 44);
+            this.btnLuu.Size = new System.Drawing.Size(69, 49);
             this.btnLuu.TabIndex = 9;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -168,7 +167,7 @@
             this.btnXoa.Location = new System.Drawing.Point(613, 59);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(69, 44);
+            this.btnXoa.Size = new System.Drawing.Size(69, 49);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -183,7 +182,7 @@
             this.btnSua.Location = new System.Drawing.Point(509, 59);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(69, 44);
+            this.btnSua.Size = new System.Drawing.Size(69, 49);
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -216,7 +215,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(724, 414);
+            this.groupBox2.Size = new System.Drawing.Size(724, 296);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Giáo Viên";
@@ -238,7 +237,7 @@
             this.dgvGiaoVien.Location = new System.Drawing.Point(3, 20);
             this.dgvGiaoVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
-            this.dgvGiaoVien.Size = new System.Drawing.Size(718, 392);
+            this.dgvGiaoVien.Size = new System.Drawing.Size(718, 274);
             this.dgvGiaoVien.TabIndex = 0;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             this.dgvGiaoVien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvGiaoVien_RowPrePaint);
@@ -396,8 +395,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.btnThemCN);
-            this.groupBox1.Controls.Add(this.btnXemDSCN);
+            this.groupBox1.Controls.Add(this.tnThongTin);
             this.groupBox1.Controls.Add(this.dpNgaySinh);
             this.groupBox1.Controls.Add(this.cmbGioiTinh);
             this.groupBox1.Controls.Add(this.cmbMaMon);
@@ -418,30 +416,20 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(330, 544);
+            this.groupBox1.Size = new System.Drawing.Size(330, 424);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giáo Viên";
             // 
-            // btnThemCN
+            // tnThongTin
             // 
-            this.btnThemCN.Location = new System.Drawing.Point(66, 474);
-            this.btnThemCN.Name = "btnThemCN";
-            this.btnThemCN.Size = new System.Drawing.Size(215, 42);
-            this.btnThemCN.TabIndex = 7;
-            this.btnThemCN.Text = "Thêm Chủ Nhiệm";
-            this.btnThemCN.UseVisualStyleBackColor = true;
-            this.btnThemCN.Click += new System.EventHandler(this.btnThemCN_Click);
-            // 
-            // btnXemDSCN
-            // 
-            this.btnXemDSCN.Location = new System.Drawing.Point(66, 411);
-            this.btnXemDSCN.Name = "btnXemDSCN";
-            this.btnXemDSCN.Size = new System.Drawing.Size(215, 39);
-            this.btnXemDSCN.TabIndex = 6;
-            this.btnXemDSCN.Text = "Danh Sách Chủ Nhiệm";
-            this.btnXemDSCN.UseVisualStyleBackColor = true;
-            this.btnXemDSCN.Click += new System.EventHandler(this.btnXemDSCN_Click);
+            this.tnThongTin.Location = new System.Drawing.Point(60, 371);
+            this.tnThongTin.Name = "tnThongTin";
+            this.tnThongTin.Size = new System.Drawing.Size(215, 32);
+            this.tnThongTin.TabIndex = 6;
+            this.tnThongTin.Text = "Thông Tin Chủ Nhiệm";
+            this.tnThongTin.UseVisualStyleBackColor = true;
+            this.tnThongTin.Click += new System.EventHandler(this.btnXemDSCN_Click);
             // 
             // dpNgaySinh
             // 
@@ -505,7 +493,7 @@
             this.btnThem.Location = new System.Drawing.Point(409, 59);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(69, 44);
+            this.btnThem.Size = new System.Drawing.Size(69, 49);
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -516,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 545);
+            this.ClientSize = new System.Drawing.Size(1058, 436);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnTimKiem);
@@ -583,7 +571,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnThemCN;
-        private System.Windows.Forms.Button btnXemDSCN;
+        private System.Windows.Forms.Button tnThongTin;
     }
 }

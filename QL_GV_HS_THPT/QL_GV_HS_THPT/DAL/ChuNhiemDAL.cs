@@ -13,11 +13,14 @@ namespace QL_GV_HS_THPT.DAL
     {
 
         KetNoi conn = new KetNoi();
-        public DataTable GetData()
+        public DataTable GetData(string str)
         {
-            return conn.GetData("SP_CN_SelectAll ", null);
+            return conn.GetData(str);
         }
-
+        public DataTable GetDataCN()
+        {
+            return conn.GetData("Xem_GVCN", null);
+        }
         public DataTable GetListMaLop()
         {
             return conn.GetData("SP_SelectMaLop ", null);

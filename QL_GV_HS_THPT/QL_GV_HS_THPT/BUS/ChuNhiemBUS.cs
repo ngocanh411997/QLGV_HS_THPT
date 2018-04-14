@@ -13,9 +13,13 @@ namespace QL_GV_HS_THPT.BUS
     {
         ChuNhiemDAL da = new ChuNhiemDAL();
 
-        public DataTable GetData()
+        public DataTable GetData(string str)
         {
-            return da.GetData();
+            return da.GetData(str);
+        }
+        public DataTable GetDaTaCN()
+        {
+            return da.GetDataCN();
         }
 
         public DataTable GetListMaLop()

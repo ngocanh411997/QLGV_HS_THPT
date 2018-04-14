@@ -56,7 +56,7 @@ namespace QL_GV_HS_THPT.View
         public void ShowMaGV()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetData();
+            dt = Bus.GetDaTaCN();
             cbMaGV.DataSource = dt;
             cbMaGV.DisplayMember = "MaGV";
             cbMaGV.ValueMember = "MaGV";
@@ -66,7 +66,7 @@ namespace QL_GV_HS_THPT.View
         {
             this.ShowMaGV();
             this.ShowMaLop();
-            dgvCN.DataSource = Bus.GetData();
+            dgvCN.DataSource = Bus.GetDaTaCN();
         }
 
         private void frmQLChuNhiem_Load(object sender, EventArgs e)
