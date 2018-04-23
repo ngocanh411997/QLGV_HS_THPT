@@ -188,6 +188,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnThoat);
             this.Name = "frmQuanLyChung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyChung";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

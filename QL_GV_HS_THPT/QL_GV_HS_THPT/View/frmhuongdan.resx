@@ -117,35 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
-        7QAACu0BAohJwQAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAAA2hJREFUWEft10lM
-        E2EUB/CRRRQXIioQFqFsZekMUFCQIEWqGBMhmggaEzUadw5CIiJoRAE3kMWiIGrdImhCIgYsEtZiS0sr
-        i8arRhNIvOnZAzzfI1NitcUhTsOFwy8zad/33n+WdloGAJj5NK/D6cAXAoh2BorfMK7HWxjnud5PogRo
-        NC8NejKW+vXpe8XnBpP79rmEECXAg5GIk/eHZaAeSYLHY2lwx7QqS2gIUQI0mCVFdUNecMvoAXffxcLD
-        0XRQGT0FhRAlQJ1Jkl9r8AVSbVgNDWY5PBhRTuH+P0P8FaBMy/hXG/zCawwBgtzUewXXGCRVVYP+YFGp
-        94LbpgS4N6ycqtCvnTWEVYCqwdDDjcPbfqpHs0E9uluQh6N78NTL4YbODyr063iBcF3nA6qhRLwkW6au
-        6bzshrAKoBpK6a01JuLiEGwYJlA41gfDtbdBSGLlyoAf1BqTod6cMVmu9c60dWNaBbiqk2rKBoKgfCB4
-        jkKw3rZSbQBUG1OgzrR1slTrr/wzhFWA0gGp5rI2DEpFVtIfCFUGBdQY07+f6/H0+T2EVYCS/kjNxT4p
-        iC8CLvSGQMVgGlzVbVDZDVDcE60p7o4ERyjqksKFHhYu9SX02g1Q0CnTnHkTBY5QQH07IqGwkz1nN0Be
-        O6s53R4NDtEWDfmvuQ+FHZuW2A2Q+4rrONUqA0fIbWXH89qSAmb9FBxriek80sLCXB3FNbPjJk68jA/9
-        5/fA4RdxioNN3MeDTTFfhDrQxH1CP/Y/Y8EWfG/i0HN5iL2no82HUXN3l1Nzl14QarzvcUJRtpqFP+Wo
-        uYm9j+JsHrklkChPw113489m1rNgseMO7XMTOxvi7B65qAGy6tfnZ9xiwWKbihvPUq+XCPlRMn0GnBmG
-        LEJOyAUtRm5oCXJHy9BytIK3ErceBJe6bjrP5SgqOZh2g/2WVBAVzfeltdSDelFP6k0zaNb0bEsAKvBF
-        UsSheJSIklEKSkVpvM24TecpnRhG4e7hpozLi+yTF0SZfeRrsrF3LL+G1m7ke1FP6k0zaJbb7wEoGR2R
-        N/JHQSgUhaMIFIVkPBa3MTwaFIsDZSgYSVAYvkY1tIbWUg/qRT2pN82gWS6C/5hgseUyWS4VncIZLriP
-        JdNwf6ZW8D0gpNBRNaJ8DP8n3EKAX92Y0dXud+oOAAAAAElFTkSuQmCC
+  <data name="label4.Text" xml:space="preserve">
+    <value>Bước 4: Trên giao diện quản lý như hình bên, ở trên cùng là phần nhập thông tin
+bên dưới là các nút thực hiện thao tác và dưới cùng là bảng hiện dữ liệu
+-để thêm dữ liệu bạn chọn nút "Thêm"
+- tiếp đến bạn nhập ở phần nhập thông tin 
+-cuối cùng ấn nút "Lưu" để hoàn thành hoặc ấn nút "Hủy" để hủy thao tác 
+
 </value>
   </data>
-  <metadata name="TenGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TenLop.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NamHoc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

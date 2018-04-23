@@ -387,6 +387,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmDiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDiem";
             this.Load += new System.EventHandler(this.frmDiem_Load);
             this.groupBox4.ResumeLayout(false);

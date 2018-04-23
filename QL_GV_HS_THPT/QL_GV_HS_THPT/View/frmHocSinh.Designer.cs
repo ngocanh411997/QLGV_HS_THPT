@@ -560,6 +560,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHocSinh";
             this.Load += new System.EventHandler(this.frmHocSinh_Load);
             this.groupBox4.ResumeLayout(false);

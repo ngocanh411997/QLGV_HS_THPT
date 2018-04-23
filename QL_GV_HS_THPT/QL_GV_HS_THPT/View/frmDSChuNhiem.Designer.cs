@@ -125,6 +125,7 @@
             this.Controls.Add(this.lbDSCN);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDSChuNhiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Chủ Nhiệm";
             this.Load += new System.EventHandler(this.frmDSChuNhiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSChuNhiem)).EndInit();

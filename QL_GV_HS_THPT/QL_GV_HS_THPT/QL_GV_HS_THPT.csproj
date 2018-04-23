@@ -100,6 +100,12 @@
     <Compile Include="View\frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmhuongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmhuongdan.Designer.cs">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -159,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmhuongdan.resx">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
@@ -191,7 +201,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="dangnhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

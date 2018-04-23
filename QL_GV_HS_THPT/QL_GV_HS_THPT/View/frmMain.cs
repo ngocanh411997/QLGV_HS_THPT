@@ -20,7 +20,7 @@ namespace QL_GV_HS_THPT.View
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void quảnLýChungToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -39,6 +39,13 @@ namespace QL_GV_HS_THPT.View
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmhuongdan hd = new frmhuongdan();
+            hd.Show();
+            
         }
     }
 }
