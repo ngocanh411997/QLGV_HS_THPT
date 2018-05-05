@@ -289,9 +289,11 @@
             // lbQLL
             // 
             this.lbQLL.AutoSize = true;
-            this.lbQLL.Location = new System.Drawing.Point(298, 9);
+            this.lbQLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQLL.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbQLL.Location = new System.Drawing.Point(234, 9);
             this.lbQLL.Name = "lbQLL";
-            this.lbQLL.Size = new System.Drawing.Size(68, 13);
+            this.lbQLL.Size = new System.Drawing.Size(135, 25);
             this.lbQLL.TabIndex = 21;
             this.lbQLL.Text = "Quản Lý Lớp";
             // 

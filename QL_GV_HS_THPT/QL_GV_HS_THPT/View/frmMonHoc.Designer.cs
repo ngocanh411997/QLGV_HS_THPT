@@ -44,10 +44,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvMonHoc = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Khoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -56,6 +52,10 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Khoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -228,30 +228,6 @@
             this.dgvMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonHoc_CellClick);
             this.dgvMonHoc.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvMonHoc_RowPrePaint);
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaMon
-            // 
-            this.MaMon.DataPropertyName = "MaMon";
-            this.MaMon.HeaderText = "Mã Môn";
-            this.MaMon.Name = "MaMon";
-            // 
-            // TenMon
-            // 
-            this.TenMon.DataPropertyName = "TenMon";
-            this.TenMon.HeaderText = "Tên Môn";
-            this.TenMon.Name = "TenMon";
-            // 
-            // Khoi
-            // 
-            this.Khoi.DataPropertyName = "Khoi";
-            this.Khoi.HeaderText = "Khối";
-            this.Khoi.Name = "Khoi";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnHuy);
@@ -372,6 +348,31 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            this.MaMon.HeaderText = "Mã Môn";
+            this.MaMon.Name = "MaMon";
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            this.TenMon.HeaderText = "Tên Môn";
+            this.TenMon.Name = "TenMon";
+            // 
+            // Khoi
+            // 
+            this.Khoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Khoi.DataPropertyName = "Khoi";
+            this.Khoi.HeaderText = "Khối";
+            this.Khoi.Name = "Khoi";
+            // 
             // frmMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,10 +418,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvMonHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Khoi;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
@@ -429,5 +426,9 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Khoi;
     }
 }

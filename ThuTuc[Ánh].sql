@@ -87,8 +87,9 @@ CREATE PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph F
  
  GO 
  SELECT TenGV,TenLop,NamHoc
- FROM dbo.GiaoVien INNER JOIN dbo.ChuNhiem
- ON ChuNhiem.MaGV = GiaoVien.MaGV INNER JOIN dbo.Lop ON Lop.MaGVCN = GiaoVien.MaGV
+ FROM dbo.ChuNhiem INNER JOIN dbo.GiaoVien ON GiaoVien.MaGV = ChuNhiem.MaGV INNER JOIN dbo.Lop ON Lop.MaLop = ChuNhiem.MaLop  
+
+
 
  --
  GO

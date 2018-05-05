@@ -72,7 +72,7 @@ namespace QL_GV_HS_THPT.View
         private void frmQLChuNhiem_Load(object sender, EventArgs e)
         {
             HienThi();
-            //DisEnl(false);
+            DisEnl(false);
         }
 
         private void dgvCN_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -112,7 +112,7 @@ namespace QL_GV_HS_THPT.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
         }

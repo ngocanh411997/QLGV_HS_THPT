@@ -38,3 +38,4 @@ H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debu
 H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.exe
 H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.pdb
 H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmhuongdan.resources
+C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmhuongdan.resources

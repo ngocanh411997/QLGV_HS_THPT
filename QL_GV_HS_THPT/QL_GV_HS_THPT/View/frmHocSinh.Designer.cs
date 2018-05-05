@@ -60,6 +60,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,10 +73,6 @@
             this.DanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TonGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,7 +86,7 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(705, 17);
+            this.btnThoat.Location = new System.Drawing.Point(537, 17);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 75);
             this.btnThoat.TabIndex = 6;
@@ -233,7 +233,7 @@
             this.groupBox4.Controls.Add(this.btnXoa);
             this.groupBox4.Location = new System.Drawing.Point(343, 365);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(797, 98);
+            this.groupBox4.Size = new System.Drawing.Size(617, 98);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức Năng";
@@ -244,7 +244,7 @@
             this.btnHuy.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(414, 17);
+            this.btnHuy.Location = new System.Drawing.Point(315, 17);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(68, 75);
             this.btnHuy.TabIndex = 10;
@@ -259,7 +259,7 @@
             this.btnLuu.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(318, 17);
+            this.btnLuu.Location = new System.Drawing.Point(241, 17);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(68, 75);
             this.btnLuu.TabIndex = 9;
@@ -274,7 +274,7 @@
             this.btnXemDiem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXemDiem.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.Image")));
             this.btnXemDiem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXemDiem.Location = new System.Drawing.Point(609, 17);
+            this.btnXemDiem.Location = new System.Drawing.Point(463, 17);
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.Size = new System.Drawing.Size(68, 75);
             this.btnXemDiem.TabIndex = 8;
@@ -289,7 +289,7 @@
             this.btnClear.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClear.Location = new System.Drawing.Point(513, 17);
+            this.btnClear.Location = new System.Drawing.Point(389, 17);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(68, 75);
             this.btnClear.TabIndex = 7;
@@ -319,7 +319,7 @@
             this.btnSua.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(132, 17);
+            this.btnSua.Location = new System.Drawing.Point(102, 17);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 75);
             this.btnSua.TabIndex = 4;
@@ -334,7 +334,7 @@
             this.btnXoa.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(227, 17);
+            this.btnXoa.Location = new System.Drawing.Point(172, 17);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(63, 75);
             this.btnXoa.TabIndex = 5;
@@ -413,7 +413,7 @@
             this.groupBox2.Controls.Add(this.dgvHocSinh);
             this.groupBox2.Location = new System.Drawing.Point(340, 81);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(888, 257);
+            this.groupBox2.Size = new System.Drawing.Size(684, 257);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Học Sinh";
@@ -434,64 +434,10 @@
             this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHocSinh.Location = new System.Drawing.Point(3, 16);
             this.dgvHocSinh.Name = "dgvHocSinh";
-            this.dgvHocSinh.Size = new System.Drawing.Size(882, 238);
+            this.dgvHocSinh.Size = new System.Drawing.Size(678, 238);
             this.dgvHocSinh.TabIndex = 0;
             this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
             this.dgvHocSinh.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHocSinh_RowPrePaint);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã HS";
-            this.MaHS.Name = "MaHS";
-            // 
-            // TenHS
-            // 
-            this.TenHS.DataPropertyName = "TenHS";
-            this.TenHS.HeaderText = "Tên HS";
-            this.TenHS.Name = "TenHS";
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới Tính";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // DanToc
-            // 
-            this.DanToc.DataPropertyName = "DanToc";
-            this.DanToc.HeaderText = "Dân Tộc";
-            this.DanToc.Name = "DanToc";
-            // 
-            // TonGiao
-            // 
-            this.TonGiao.DataPropertyName = "TonGiao";
-            this.TonGiao.HeaderText = "Tôn Giáo";
-            this.TonGiao.Name = "TonGiao";
-            // 
-            // TenLop
-            // 
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
             // 
             // label3
             // 
@@ -548,12 +494,67 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Quản Lý Học Sinh";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã HS";
+            this.MaHS.Name = "MaHS";
+            // 
+            // TenHS
+            // 
+            this.TenHS.DataPropertyName = "TenHS";
+            this.TenHS.HeaderText = "Tên HS";
+            this.TenHS.Name = "TenHS";
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới Tính";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // DanToc
+            // 
+            this.DanToc.DataPropertyName = "DanToc";
+            this.DanToc.HeaderText = "Dân Tộc";
+            this.DanToc.Name = "DanToc";
+            // 
+            // TonGiao
+            // 
+            this.TonGiao.DataPropertyName = "TonGiao";
+            this.TonGiao.HeaderText = "Tôn Giáo";
+            this.TonGiao.Name = "TonGiao";
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1240, 526);
+            this.ClientSize = new System.Drawing.Size(1036, 526);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

@@ -25,8 +25,10 @@ namespace QL_GV_HS_THPT.View
 
         private void quảnLýChungToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmQuanLyChung QLChung = new frmQuanLyChung();
             QLChung.ShowDialog();
+            this.Show();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,8 +45,10 @@ namespace QL_GV_HS_THPT.View
 
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmhuongdan hd = new frmhuongdan();
-            hd.Show();
+            hd.ShowDialog();
+            this.Show();
             
         }
     }

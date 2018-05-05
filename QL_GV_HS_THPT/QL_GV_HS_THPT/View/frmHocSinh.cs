@@ -60,10 +60,13 @@ namespace QL_GV_HS_THPT.View
             txtTenHS.Text = "";
             txtTonGiao.Text = "";
             cbMaLop.Text = "";
+            radNam.Checked = false;
+            radNu.Checked = false;
         }
         private void HienThi()
         {
-            dgvHocSinh.DataSource = Bus.GetData();         
+            dgvHocSinh.DataSource = Bus.GetData();
+            dgvHocSinh.AutoResizeColumns();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -151,14 +154,42 @@ namespace QL_GV_HS_THPT.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-             txtMaHS.Enabled = false;
+            if (txtMaHS.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtTenHS.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (cbMaLop.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập lớp học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (radNam.Checked == false && radNu.Checked==false)
+            {
+                MessageBox.Show("Bạn chưa chọn giới tính cho học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDanToc.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập dân tộc học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtTonGiao.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tôn giáo học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập địa chỉ học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            txtMaHS.Enabled = false;
             // xử lý
             obj.MaHS = txtMaHS.Text;
             obj.TenHS = txtTenHS.Text;
@@ -177,7 +208,7 @@ namespace QL_GV_HS_THPT.View
 
             obj.GioiTinh = gt;
 
-            if (fluu == 0)
+            if (txtMaHS.Text != "" && txtTenHS.Text !="" && cbMaLop.SelectedValue.ToString() != "" && txtDanToc.Text !="" && txtTonGiao.Text !="" && txtDiaChi.Text !="" && (radNam.Checked == true || radNu.Checked==true) && fluu == 0)
             {
                 try
                 {
@@ -188,12 +219,12 @@ namespace QL_GV_HS_THPT.View
                     DisEnl(false);
                     fluu = 1;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi!");
+                    MessageBox.Show("Lỗi!" + ex.Message);
                 }
             }
-            else
+            else if (txtMaHS.Text != "" && txtTenHS.Text != "" && cbMaLop.SelectedValue.ToString() != "" && txtDanToc.Text != "" && txtTonGiao.Text != "" && txtDiaChi.Text != "" && (radNam.Checked == true || radNu.Checked == true) && fluu !=0)
             {
                 try
                 {
@@ -203,9 +234,9 @@ namespace QL_GV_HS_THPT.View
                     clearData();
                     DisEnl(false);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi sửa" + ex.Message);
                 }
             }
         }
@@ -264,9 +295,18 @@ namespace QL_GV_HS_THPT.View
 
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
-            frmXemDiem xemdiem = new frmXemDiem(txtMaHS.Text);
-            xemdiem.Show();
-            //this.Close();
+            if (txtMaHS.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.Hide();
+                frmXemDiem xemdiem = new frmXemDiem(txtMaHS.Text);
+                xemdiem.ShowDialog();
+                this.Show();
+            }
+           
         }
     }
 }

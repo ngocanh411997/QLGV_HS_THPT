@@ -32,7 +32,7 @@ namespace QL_GV_HS_THPT.View
         {
             txtMaGV.Text = ma;
             txtMaGV.Enabled = false;
-            dgvDSChuNhiem.DataSource = Bus.GetData(" SELECT TenGV,TenLop,NamHoc FROM dbo.GiaoVien INNER JOIN dbo.ChuNhiem ON ChuNhiem.MaGV = GiaoVien.MaGV INNER JOIN dbo.Lop ON Lop.MaGVCN = GiaoVien.MaGV where ChuNhiem.MaGV like '%"+txtMaGV.Text.Trim()+"%'");
+            dgvDSChuNhiem.DataSource = Bus.GetData("SELECT TenGV, TenLop, NamHoc FROM dbo.ChuNhiem INNER JOIN dbo.GiaoVien ON GiaoVien.MaGV = ChuNhiem.MaGV INNER JOIN dbo.Lop ON Lop.MaLop = ChuNhiem.MaLop where ChuNhiem.MaGV like '%"+txtMaGV.Text.Trim()+"%'");
         }
         private void frmDSChuNhiem_Load(object sender, EventArgs e)
         {

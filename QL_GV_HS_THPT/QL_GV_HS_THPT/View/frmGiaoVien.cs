@@ -118,7 +118,7 @@ namespace QL_GV_HS_THPT.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
         }
@@ -146,7 +146,7 @@ namespace QL_GV_HS_THPT.View
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("loi");
+                    MessageBox.Show("loi" + ex.Message);
                 }
             }
             else
@@ -235,8 +235,18 @@ namespace QL_GV_HS_THPT.View
 
         private void btnXemDSCN_Click(object sender, EventArgs e)
         {
-            frmDSChuNhiem frmDSCN = new frmDSChuNhiem(txtMaGV.Text);
-            frmDSCN.Show();
+            if (txtMaGV.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn giáo viên! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.Hide();
+                frmDSChuNhiem frmDSCN = new frmDSChuNhiem(txtMaGV.Text);
+                frmDSCN.ShowDialog();
+                this.Show();
+            }
+            
         }
     }
 }

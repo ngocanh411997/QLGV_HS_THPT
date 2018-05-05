@@ -102,7 +102,7 @@ namespace QL_GV_HS_THPT
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
         }
