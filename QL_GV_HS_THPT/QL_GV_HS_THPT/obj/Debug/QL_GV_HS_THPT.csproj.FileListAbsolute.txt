@@ -39,3 +39,23 @@ H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debu
 H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.pdb
 H:\Users\MINH\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmhuongdan.resources
 C:\Users\NgocAnh\Documents\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmhuongdan.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\Debug\QL_GV_HS_THPT.exe.config
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.exe
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.pdb
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\Debug\QL_GV_HS_THPT.exe
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\Debug\QL_GV_HS_THPT.pdb
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.Properties.Resources.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmDangNhap.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.frmDiem.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmDSChuNhiem.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmGiaoVien.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmHocSinh.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmhuongdan.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmLop.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmMain.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmMonHoc.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmQLChuNhiem.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmQuanLyChung.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmXemDiem.resources
+C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.csproj.GenerateResource.Cache

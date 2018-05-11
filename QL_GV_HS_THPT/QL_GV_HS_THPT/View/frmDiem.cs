@@ -27,9 +27,9 @@ namespace QL_GV_HS_THPT
         {
             DataTable dt = new DataTable();
             dt = diembus.GetListMon();
-            cbMon.DataSource = dt;
-            cbMon.DisplayMember = "TenMon";
-            cbMon.ValueMember = "MaMon";
+            cmbMaMon.DataSource = dt;
+            cmbMaMon.DisplayMember = "TenMon";
+            cmbMaMon.ValueMember = "MaMon";
 
         }
         private void DisEnl(bool e)
@@ -41,7 +41,7 @@ namespace QL_GV_HS_THPT
             btnLuu.Enabled = e;
             btnHuy.Enabled = e;
             txtMaHS.Enabled = e;
-            cbMon.Enabled = e;
+            cmbMaMon.Enabled = e;
             txtDiemMieng.Enabled = e;
             txtDiem15p.Enabled = e;
             txtDiem1Tiet.Enabled = e;
@@ -50,7 +50,7 @@ namespace QL_GV_HS_THPT
         }
         private void clearData()
         {
-            cbMon.Text = "";
+            cmbMaMon.Text = "";
             txtDiemMieng.Text = "";
             txtDiem15p.Text = "";
             txtDiem1Tiet.Text = "";
@@ -123,7 +123,7 @@ namespace QL_GV_HS_THPT
         private void btnLuu_Click(object sender, EventArgs e)
         {
             diem.MaHS = txtMaHS.Text;
-            diem.MaMon = cbMon.SelectedValue.ToString();
+            diem.MaMon = cmbMaMon.SelectedValue.ToString();
             diem.DiemMieng =float.Parse(txtDiemMieng.Text);
             diem.Diem15p = float.Parse(txtDiem15p.Text);
             diem.Diem1Tiet = float.Parse(txtDiem1Tiet.Text);
@@ -167,6 +167,8 @@ namespace QL_GV_HS_THPT
             cbType.Text = "Theo Mã Học Sinh";
             HienThi();
             DisEnl(false);
+            cmbMaMon.DataSource = diembus.GetMonHoc("select * from MonHoc");
+            cmbMaMon.DisplayMember = "TenMon";
         }
 
         private void dgvDiem_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -177,13 +179,23 @@ namespace QL_GV_HS_THPT
 
         private void dgvDiem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaHS.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["MaHS"].Value);
-            cbMon.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["TenMon"].Value);
-            txtDiemMieng.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemMieng"].Value);
-            txtDiem15p.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem15ph"].Value);
-            txtDiem1Tiet.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem1Tiet"].Value);
-            txtDiemHocKy.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemHocKy"].Value);
-            
+            if (fluu == 0)
+            {
+                cmbMaMon.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["TenMon"].Value);
+                txtDiemMieng.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemMieng"].Value);
+                txtDiem15p.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem15ph"].Value);
+                txtDiem1Tiet.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem1Tiet"].Value);
+                txtDiemHocKy.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemHocKy"].Value);
+            }
+            else
+            {
+                txtMaHS.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["MaHS"].Value);
+                cmbMaMon.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["TenMon"].Value);
+                txtDiemMieng.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemMieng"].Value);
+                txtDiem15p.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem15ph"].Value);
+                txtDiem1Tiet.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["Diem1Tiet"].Value);
+                txtDiemHocKy.Text = Convert.ToString(dgvDiem.CurrentRow.Cells["DiemHocKy"].Value);
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

@@ -12,6 +12,10 @@ namespace QL_GV_HS_THPT.DAL
     class DiemDAL
     {
         KetNoi conn = new KetNoi();
+        public DataTable GetMonHoc(string str)
+        {
+            return conn.GetData(str);
+        }
         public DataTable GetData()
         {
             return conn.GetData("SP_XemDiem", null);

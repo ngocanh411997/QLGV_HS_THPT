@@ -12,6 +12,10 @@ namespace QL_GV_HS_THPT.BUS
     class DiemBUS
     {
         DiemDAL da = new DiemDAL();
+        public DataTable GetMonHoc(string str)
+        {
+            return da.GetMonHoc(str);
+        }
         public DataTable GetData()
         {
             return da.GetData();
