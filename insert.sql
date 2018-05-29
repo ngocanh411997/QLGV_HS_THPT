@@ -198,3 +198,40 @@ VALUES  ( 'HS10' , -- MaHS - varchar(10)
           N'Không' , -- TonGiao - nvarchar(50)
           'ML03'  -- MaLop - varchar(10)
         )
+
+
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM01', -- MaMon - varchar(10)
+          N'Hóa', -- TenMon - nvarchar(50)
+          '10'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM02', -- MaMon - varchar(10)
+          N'Hóa', -- TenMon - nvarchar(50)
+          '11'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM03', -- MaMon - varchar(10)
+          N'Hóa', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM04', -- MaMon - varchar(10)
+          N'Lý', -- TenMon - nvarchar(50)
+          '10'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM05', -- MaMon - varchar(10)
+          N'Lý', -- TenMon - nvarchar(50)
+          '11'  -- Khoi - varchar(10)
+          )
