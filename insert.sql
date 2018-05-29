@@ -235,3 +235,38 @@ VALUES  ( 'MM05', -- MaMon - varchar(10)
           N'Lý', -- TenMon - nvarchar(50)
           '11'  -- Khoi - varchar(10)
           )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM06', -- MaMon - varchar(10)
+          N'Lý', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM07', -- MaMon - varchar(10)
+          N'Toán', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM08', -- MaMon - varchar(10)
+          N'Văn', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM09', -- MaMon - varchar(10)
+          N'Sử', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
+GO
+INSERT INTO dbo.MonHoc
+        ( MaMon, TenMon, Khoi )
+VALUES  ( 'MM10', -- MaMon - varchar(10)
+          N'Địa', -- TenMon - nvarchar(50)
+          '12'  -- Khoi - varchar(10)
+          )
