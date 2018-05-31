@@ -1,4 +1,34 @@
-﻿GO
+﻿USE QLGV_HS_THPT
+GO 
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV01','LH01','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV02','LH02','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV03','LH03','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV04','LH04','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV05','LH05','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV06','LH06','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV07','LH07','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV08','LH08','2018')
+
+INSERT dbo.ChuNhiem ( MaGV, MaLop, NamHoc )
+VALUES  ('GV09','LH09','2018')
+
+
+GO
 INSERT INTO dbo.HocSinh
         ( MaHS ,
           TenHS ,
