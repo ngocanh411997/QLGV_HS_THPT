@@ -300,3 +300,35 @@ VALUES  ( 'MM10', -- MaMon - varchar(10)
           N'Địa', -- TenMon - nvarchar(50)
           '12'  -- Khoi - varchar(10)
           )
+
+--GO
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH01','CNTT','GV01' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH02','KTPM','GV02' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH03','KHMT','GV03' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH04','HTTT','GV04' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH05','TT&MMT','GV05' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH06','CĐT','GV06' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH07','ĐTVT','GV07' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH08','ĐTYS','GV08' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH09','CNHH','GV09' )
+--INSERT dbo.Lop
+--        ( MaLop, TenLop, MaGVCN )
+--VALUES  ('LH10','XD','GV10' )
