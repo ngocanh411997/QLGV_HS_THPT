@@ -332,3 +332,44 @@ VALUES  ( 'MM10', -- MaMon - varchar(10)
 --INSERT dbo.Lop
 --        ( MaLop, TenLop, MaGVCN )
 --VALUES  ('LH10','XD','GV10' )
+
+INSERT dbo.Diem
+VALUES  ( 'HS01' ,'MM01' , 7 ,8 ,8 , 7 )
+INSERT dbo.Diem
+VALUES  ( 'HS01' ,'MM02' , 6 ,8 ,5 , 8 )
+INSERT dbo.Diem
+VALUES  ( 'HS02' ,'MM03' , 7 ,4 ,6 , 9 )
+INSERT dbo.Diem
+VALUES  ( 'HS02' ,'MM04' , 3 ,6 ,9 , 6 )
+INSERT dbo.Diem
+VALUES  ( 'HS03' ,'MM01' , 2 ,7 ,6 , 5 )
+INSERT dbo.Diem
+VALUES  ( 'HS03' ,'MM05' , 7 ,8 ,5 , 4 )
+INSERT dbo.Diem
+VALUES  ( 'HS04' ,'MM06' , 9 ,9 ,4 , 3 )
+INSERT dbo.Diem
+VALUES  ( 'HS04' ,'MM07' , 10 ,4 ,7 ,8 )
+INSERT dbo.Diem
+VALUES  ( 'HS05' ,'MM04' , 2 ,6,8 , 4)
+INSERT dbo.Diem
+VALUES  ( 'HS05' ,'MM06' , 5 ,7 ,5 , 7 )
+INSERT dbo.Diem
+VALUES  ( 'HS06' ,'MM04' , 6 ,8 ,8 , 3 )
+INSERT dbo.Diem
+VALUES  ( 'HS06' ,'MM05' , 8 ,9 ,3 , 8 )
+INSERT dbo.Diem
+VALUES  ( 'HS07' ,'MM02' , 9 ,5 ,9 , 4 )
+INSERT dbo.Diem
+VALUES  ( 'HS07' ,'MM08' , 5 ,4 ,4 , 4 )
+INSERT dbo.Diem
+VALUES  ( 'HS08' ,'MM09' , 3 ,8 ,7 , 5 )
+INSERT dbo.Diem
+VALUES  ( 'HS08' ,'MM02' , 4 ,3 ,6 , 7 )
+INSERT dbo.Diem
+VALUES  ( 'HS09' ,'MM02' , 6 ,9 ,7 , 8 )
+INSERT dbo.Diem
+VALUES  ( 'HS10' ,'MM01' , 7 ,9 ,6 , 9 )
+INSERT dbo.Diem
+VALUES  ( 'HS10' ,'MM06' , 8 ,4 ,5 , 5 )
+INSERT dbo.Diem
+VALUES  ( 'HS10' ,'MM01' , 7 ,8 ,4 , 4 )
