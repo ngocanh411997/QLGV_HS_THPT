@@ -37,6 +37,7 @@
             this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThemCN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSChuNhiem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,12 +113,28 @@
             this.NamHoc.HeaderText = "Năm Học";
             this.NamHoc.Name = "NamHoc";
             // 
+            // btnThemCN
+            // 
+            this.btnThemCN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemCN.Image = ((System.Drawing.Image)(resources.GetObject("btnThemCN.Image")));
+            this.btnThemCN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThemCN.Location = new System.Drawing.Point(242, 215);
+            this.btnThemCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemCN.Name = "btnThemCN";
+            this.btnThemCN.Size = new System.Drawing.Size(69, 49);
+            this.btnThemCN.TabIndex = 10;
+            this.btnThemCN.Text = "Thêm CN";
+            this.btnThemCN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThemCN.UseVisualStyleBackColor = true;
+            this.btnThemCN.Click += new System.EventHandler(this.btnThemCN_Click);
+            // 
             // frmDSChuNhiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(421, 301);
+            this.Controls.Add(this.btnThemCN);
             this.Controls.Add(this.dgvDSChuNhiem);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label1);
@@ -144,5 +161,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
+        private System.Windows.Forms.Button btnThemCN;
     }
 }

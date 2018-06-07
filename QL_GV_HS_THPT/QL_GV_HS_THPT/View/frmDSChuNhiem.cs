@@ -49,5 +49,11 @@ namespace QL_GV_HS_THPT.View
             else
                 HienThi();
         }
+
+        private void btnThemCN_Click(object sender, EventArgs e)
+        {
+            frmQLChuNhiem CN = new frmQLChuNhiem();
+            CN.ShowDialog();
+        }
     }
 }
