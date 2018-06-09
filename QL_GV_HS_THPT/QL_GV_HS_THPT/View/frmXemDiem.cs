@@ -28,7 +28,7 @@ namespace QL_GV_HS_THPT.View
         {
             txtMaHS.Text = ma;
             txtMaHS.Enabled = false;
-            dgvXemDiem.DataSource = Bus.XemDiemHS("  SELECT TenHS,TenLop,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy,TrungBinh=((DiemMieng+Diem15ph+Diem1Tiet*2+DiemHocKy*3)/7) FROM dbo.HocSinh INNER JOIN dbo.Diem ON Diem.MaHS = HocSinh.MaHS INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon WHERE Diem.MaHS = '" + txtMaHS.Text.Trim() + "'");
+            dgvXemDiem.DataSource = Bus.XemDiemHS("SELECT TenHS,TenLop,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy,TrungBinh=((DiemMieng+Diem15ph+Diem1Tiet*2+DiemHocKy*3)/7) FROM dbo.HocSinh INNER JOIN dbo.Diem ON Diem.MaHS = HocSinh.MaHS INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon WHERE Diem.MaHS = '" + txtMaHS.Text.Trim() + "'");
             dgvXemDiem.AutoResizeColumns();
         }
         private void frmXemDiem_Load(object sender, EventArgs e)

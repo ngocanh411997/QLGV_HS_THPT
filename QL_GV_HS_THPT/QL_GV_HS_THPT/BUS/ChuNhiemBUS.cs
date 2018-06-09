@@ -48,5 +48,10 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.KiemTraTonTai(Ma);
         }
+        public DataTable DatCN()
+        {
+            return da.DatCN();
+        }
+
     }
 }

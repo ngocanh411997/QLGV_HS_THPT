@@ -219,30 +219,43 @@ namespace QL_GV_HS_THPT
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (cbType.Text == "Theo Mã Học Sinh")
+            if (cbType.Text == "")
             {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where HocSinh.MaHS like '%" + txtTimKiem.Text + "%'");
+                MessageBox.Show("Bạn chưa chọn kiểu tìm kiếm!", "Thông báo");
             }
-            if (cbType.Text == "Theo Tên Học Sinh")
+            else if (txtTimKiem.Text == "")
             {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where HocSinh.TenHS like N'%" + txtTimKiem.Text + "%'");
+                MessageBox.Show("Bạn chưa nhập từ khóa!", "Thông báo");
             }
-            if (cbType.Text == "Theo Điểm Miệng")
+            else
             {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.DiemMieng like '%" + txtTimKiem.Text + "%'");
+                if (cbType.Text == "Theo Mã Học Sinh")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where HocSinh.MaHS like '%" + txtTimKiem.Text + "%'");
+                }
+                if (cbType.Text == "Theo Tên Học Sinh")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where HocSinh.TenHS like N'%" + txtTimKiem.Text + "%'");
+                }
+                if (cbType.Text == "Theo Điểm Miệng")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.DiemMieng like '%" + txtTimKiem.Text + "%'");
+                }
+                if (cbType.Text == "Theo Điểm 15 phút")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.Diem15ph like '%" + txtTimKiem.Text + "%'");
+                }
+                if (cbType.Text == "Theo Điểm 1 Tiết")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.Diem1Tiet like '%" + txtTimKiem.Text + "%'");
+                }
+                if (cbType.Text == "Theo Điểm Học Kỳ")
+                {
+                    dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.DiemHocKy like '%" + txtTimKiem.Text + "%'");
+                }
             }
-            if (cbType.Text == "Theo Điểm 15 phút")
-            {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.Diem15ph like '%" + txtTimKiem.Text + "%'");
-            }
-            if (cbType.Text == "Theo Điểm 1 Tiết")
-            {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.Diem1Tiet like '%" + txtTimKiem.Text + "%'");
-            }
-            if (cbType.Text == "Theo Điểm Học Kỳ")
-            {
-                dgvDiem.DataSource = diembus.TimKiem("SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon JOIN dbo.HocSinh ON HocSinh.MaHS = Diem.MaHS where Diem.DiemHocKy like '%" + txtTimKiem.Text + "%'");
-            }
+
+           
         }
 
         private void cmbMaHS_SelectedIndexChanged(object sender, EventArgs e)

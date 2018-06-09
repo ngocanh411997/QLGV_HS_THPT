@@ -71,38 +71,50 @@ namespace QL_GV_HS_THPT.View
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (cbType.Text == "Theo Mã HS")
+            if (cbType.Text == "")
             {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE MaHS LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa chọn kiểu tìm kiếm!", "Thông báo");
             }
-            if (cbType.Text == "Theo Tên HS")
+            else if (txtTimKiem.Text == "")
             {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE TenHS LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa nhập từ khóa!", "Thông báo");
             }
-            if (cbType.Text == "Theo Lớp")
+            else
             {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE TenLop LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                if (cbType.Text == "Theo Mã HS")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE MaHS LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Tên HS")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("EXEC dbo.TKTenHS @Ten = N'" + txtTimKiem.Text + "'");
+                }
+                if (cbType.Text == "Theo Lớp")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE TenLop LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Giới Tính")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE GioiTinh LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Ngày Sinh(năm-tháng-ngày)")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE NgaySinh LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Dân Tộc")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE DanToc LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Tôn Giáo")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE TonGiao LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Địa Chỉ")
+                {
+                    dgvHocSinh.DataSource = Bus.TimKiemHS("EXEC dbo.TKDCHS @Ten = N'" + txtTimKiem.Text + "'");
+                }
             }
-            if (cbType.Text == "Theo Giới Tính")
-            {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE GioiTinh LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            if (cbType.Text == "Theo Ngày Sinh(năm-tháng-ngày)")
-            {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE NgaySinh LIKE '%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            if (cbType.Text == "Theo Dân Tộc")
-            {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE DanToc LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            if (cbType.Text == "Theo Tôn Giáo")
-            {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE TonGiao LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            if (cbType.Text == "Theo Địa Chỉ")
-            {
-                dgvHocSinh.DataSource = Bus.TimKiemHS("SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop WHERE DiaChi LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
-            }
+          
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

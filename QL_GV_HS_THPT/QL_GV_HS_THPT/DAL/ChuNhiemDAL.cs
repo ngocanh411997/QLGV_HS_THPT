@@ -70,5 +70,9 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.KiemTraTonTai("Select MaGV from ChuNhiem ", Ma);
         }
+        public DataTable DatCN()
+        {
+            return conn.GetData("Sellect_All_Lop", null);
+        }
     }
 }

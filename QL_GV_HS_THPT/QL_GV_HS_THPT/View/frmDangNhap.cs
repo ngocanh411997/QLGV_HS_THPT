@@ -37,7 +37,7 @@ namespace QL_GV_HS_THPT.View
                 }
                 this.Hide();
                 frmMain main = new frmMain();
-                main.Show();
+                main.ShowDialog();
             }
             else
             {

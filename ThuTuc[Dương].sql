@@ -39,7 +39,7 @@ ALTER PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@Di
  ALTER PROC SP_XemDiem
  AS
  BEGIN
-SELECT Diem.MaHS,TenHS,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc
+SELECT Diem.MaHS,TenHS,Diem.MaMon,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy FROM dbo.Diem JOIN dbo.MonHoc
 ON MonHoc.MaMon = Diem.MaMon
 JOIN dbo.HocSinh
 ON HocSinh.MaHS = Diem.MaHS

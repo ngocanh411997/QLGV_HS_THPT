@@ -67,5 +67,10 @@ namespace QL_GV_HS_THPT.DAL
         {
             return conn.GetData(str);
         }
+        public DataTable GetListMH()
+        {
+            return conn.GetData("MonHoc_SelectAll ", null);
+        }
+        
     }
 }

@@ -47,18 +47,31 @@ namespace QL_GV_HS_THPT.View
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (cbType.Text == "Theo Mã Môn")
+            if (cbType.Text == "")
             {
-                dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE MaMon LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa chọn kiểu tìm kiếm!", "Thông báo");
             }
-            if (cbType.Text == "Theo Tên Môn")
+            else if (txtTimKiem.Text == "")
             {
-                dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE TenMon LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa nhập từ khóa!", "Thông báo");
             }
-            if (cbType.Text == "Theo Khối")
+            else
             {
-                dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE Khoi LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                if (cbType.Text == "Theo Mã Môn")
+                {
+                    dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE MaMon LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Tên Môn")
+                {
+                    dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE TenMon LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo Khối")
+                {
+                    dgvMonHoc.DataSource = Bus.TimKiemMH("SELECT * FROM MonHoc WHERE Khoi LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                }
             }
+
+           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

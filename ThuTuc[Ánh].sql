@@ -16,10 +16,13 @@ Set TenHS=@TenHS,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,DanToc=@Da
 WHERE MaHS=@MaHS
 end
 
+-- xóa hs
 GO
-CREATE PROC XoaHS(@MaHS VARCHAR(10))
+ALTER PROC XoaHS(@MaHS VARCHAR(10))
 AS
 BEGIN
+DELETE dbo.Diem
+WHERE MaHS =@MaHS
 DELETE dbo.HocSinh
 WHERE MaHS=@MaHS
 END
@@ -36,7 +39,7 @@ END
 
  -- Thêm điểm
  GO
- CREATE PROC ThemDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
+ ALTER PROC ThemDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
  AS
  INSERT INTO dbo.Diem
          ( MaHS ,
@@ -50,7 +53,7 @@ END
          )
  --sửa điểm
 GO
-CREATE PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
+ALTER PROC SuaDiem(@MaHS CHAR(10), @MaMon CHAR(10),@DiemMieng FLOAT,@Diem15ph FLOAT,@Diem1Tiet FLOAT,@DiemHocKy FLOAT)
  AS
  UPDATE dbo.Diem
  SET MaHS=@MaHS,MaMon=@MaMon,DiemMieng=@DiemMieng,Diem15ph=@Diem15ph,Diem1Tiet=@Diem1Tiet,DiemHocKy=@DiemHocKy
@@ -110,3 +113,52 @@ END
 --
 ALTER TABLE dbo.Lop
 DROP COLUMN MaGVCN
+
+SELECT TenHS,TenLop,TenMon,DiemMieng,Diem15ph,Diem1Tiet,DiemHocKy,TrungBinh=((DiemMieng+Diem15ph+Diem1Tiet*2+DiemHocKy*3)/7) FROM dbo.HocSinh INNER JOIN dbo.Diem ON Diem.MaHS = HocSinh.MaHS INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop INNER JOIN dbo.MonHoc ON MonHoc.MaMon = Diem.MaMon WHERE Diem.MaHS = 'HS01'
+---------
+CREATE FUNCTION [dbo].[ChuyenDoiUnicode] ( @strInput NVARCHAR(4000) )
+ RETURNS NVARCHAR(4000) AS BEGIN 
+ IF @strInput IS NULL RETURN @strInput
+ IF @strInput = '' RETURN @strInput 
+ DECLARE @RT NVARCHAR(4000) 
+ DECLARE @SIGN_CHARS NCHAR(136) 
+ DECLARE @UNSIGN_CHARS NCHAR (136) 
+ SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) 
+ SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' 
+ DECLARE @COUNTER int 
+ DECLARE @COUNTER1 int 
+ SET @COUNTER = 1 
+ WHILE (@COUNTER <=LEN(@strInput)) 
+ BEGIN SET @COUNTER1 = 1 
+ WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) 
+ BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) 
+ BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) 
+ ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) 
+ BREAK END 
+ SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END 
+ SET @strInput = replace(@strInput,' ','-') 
+ RETURN @strInput END
+GO
+-- TK tên gần đúng HS
+GO
+CREATE PROC TKTenHS(@Ten NVARCHAR(50))
+AS BEGIN
+SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop
+WHERE dbo.ChuyenDoiUnicode(TenHS) LIKE N'%'+dbo.ChuyenDoiUnicode(@Ten)+N'%'
+END
+
+-- Địa chỉ
+GO
+CREATE PROC TKDCHS(@Ten NVARCHAR(50))
+AS BEGIN
+SELECT MaHS, TenHS, GioiTinh, NgaySinh, DiaChi, DanToc, TonGiao, TenLop FROM dbo.HocSinh INNER JOIN dbo.Lop ON Lop.MaLop = HocSinh.MaLop
+WHERE dbo.ChuyenDoiUnicode(DiaChi) LIKE N'%'+dbo.ChuyenDoiUnicode(@Ten)+N'%'
+END
+
+-- Xem Lớp
+GO
+CREATE PROC Sellect_All_Lop
+AS
+BEGIN
+	SELECT * FROM dbo.Lop
+END

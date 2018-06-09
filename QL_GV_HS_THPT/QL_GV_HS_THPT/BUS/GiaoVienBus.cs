@@ -40,5 +40,10 @@ namespace QL_GV_HS_THPT.BUS
         {
             return da.TimKiemGV(str);
         }
+        public DataTable GetListMH()
+        {
+            return da.GetListMH();
+        }
+       
     }
 }

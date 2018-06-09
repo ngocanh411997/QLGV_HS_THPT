@@ -164,8 +164,6 @@ namespace QL_GV_HS_THPT.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                frmMain m = new frmMain();
-                m.Show();
                 this.Close();
             }
             else
@@ -179,15 +177,26 @@ namespace QL_GV_HS_THPT.View
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
-        { 
-            if (cbType.Text == "Theo mã lớp")
+        {
+            if (cbType.Text == "")
             {
-                dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where MaLop Like '%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa chọn kiểu tìm kiếm!", "Thông báo");
             }
-            if (cbType.Text == "Theo tên lớp")
+            else if (txtTimKiem.Text == "")
             {
-                dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where TenLop Like N'%" + txtTimKiem.Text.Trim() + "%'");
+                MessageBox.Show("Bạn chưa nhập từ khóa!", "Thông báo");
             }
+            else
+            {
+                if (cbType.Text == "Theo mã lớp")
+                {
+                    dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where MaLop Like '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+                if (cbType.Text == "Theo tên lớp")
+                {
+                    dgvLop.DataSource = lop1.TimKiemLop("SELECT * FROM dbo.Lop where TenLop Like N'%" + txtTimKiem.Text.Trim() + "%'");
+                }
+            }  
         }
     }
 }
