@@ -135,48 +135,54 @@ namespace QL_GV_HS_THPT.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            gv.MaGV = txtMaGV.Text;
-            gv.TenGV = txtTenGV.Text;
-            gv.MaMon = cmbMaMon.Text;
-            gv.GioiTinh = cmbGioiTinh.Text;
-            gv.NgaySinh = dpNgaySinh.Text;
-            gv.DiaChi = txtDiaChi.Text;
-            gv.Sdt = txtSdt.Text;
-            gv.Luong = txtLuong.Text;
-            if(fluu == 0)
+            if (txtDiaChi.Text == " " || txtLuong.Text == "" || txtSdt.Text == "" || txtTenGV.Text == "")
             {
-                try
-                {
-                    Bus.InsertData(gv);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
-                    fluu = 1;
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("loi" + ex.Message);
-                }
+                MessageBox.Show("Yêu Cầu Nhập Đầy Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                try
+                gv.MaGV = txtMaGV.Text;
+                gv.TenGV = txtTenGV.Text;
+                gv.MaMon = cmbMaMon.Text;
+                gv.GioiTinh = cmbGioiTinh.Text;
+                gv.NgaySinh = dpNgaySinh.Text;
+                gv.DiaChi = txtDiaChi.Text;
+                gv.Sdt = txtSdt.Text;
+                gv.Luong = int.Parse(txtLuong.Text.ToString());
+                if (fluu == 0)
                 {
-                    Bus.UpdateData(gv);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
-                    fluu = 1;
+                    try
+                    {
+                        Bus.InsertData(gv);
+                        MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                        fluu = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("loi" + ex.Message);
+                    }
                 }
-                catch
+                else
                 {
-
+                    try
+                    {
+                        Bus.UpdateData(gv);
+                        MessageBox.Show("Sửa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                        fluu = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("loi" + ex.Message);
+                    }
                 }
             }
         }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

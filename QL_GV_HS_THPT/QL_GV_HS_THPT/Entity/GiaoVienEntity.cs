@@ -9,7 +9,7 @@ namespace QL_GV_HS_THPT.Entity
     public class GiaoVienEntity
     {
         private string sdt;
-        private string luong;
+        private int  luong;
         private string maGV;
         private string tenGV;
         private string maMon;
@@ -108,7 +108,7 @@ namespace QL_GV_HS_THPT.Entity
             }
         }
 
-        public string Luong
+        public int Luong
         {
             get
             {

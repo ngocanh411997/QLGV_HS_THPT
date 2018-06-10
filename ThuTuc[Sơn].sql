@@ -13,7 +13,7 @@ CREATE Proc Sua_GV(@MaGV varchar(10), @TenGV nvarchar(50),@MaMon VARCHAR(10), @G
 As
 BEGIN 
 	UPDATE GiaoVien
-	SET TenGV = @TenGV,MaMon = @MaMon,GioiTinh = @GioiTinh,NgaySinh = @NgaySinh,DiaChi = @NgaySinh,Sdt = @SDT,Luong = @Luong
+	SET TenGV = @TenGV,MaMon = @MaMon,GioiTinh = @GioiTinh,NgaySinh = @NgaySinh,DiaChi = @DiaChi,Sdt = @SDT,Luong = @Luong
 	WHERE MaGV = @MaGV
 END
 
@@ -33,6 +33,7 @@ BEGIN
 	SELECT *
 	FROM GiaoVien
 END
+GO
 
 CREATE PROC GV_SelectByID (@Ma Varchar(10))
 AS

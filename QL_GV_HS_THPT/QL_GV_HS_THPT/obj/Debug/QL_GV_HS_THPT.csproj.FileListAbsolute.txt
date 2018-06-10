@@ -59,3 +59,6 @@ C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\
 C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmQuanLyChung.resources
 C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.View.frmXemDiem.resources
 C:\Users\ADMIN\Desktop\project ttn\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.csproj.GenerateResource.Cache
+E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\bin\Debug\QL_GV_HS_THPT.exe.config
+E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.exe
+E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QLGV_HS_THPT\QL_GV_HS_THPT\QL_GV_HS_THPT\obj\Debug\QL_GV_HS_THPT.pdb
