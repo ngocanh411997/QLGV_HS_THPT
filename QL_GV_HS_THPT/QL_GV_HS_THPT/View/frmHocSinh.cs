@@ -177,79 +177,83 @@ namespace QL_GV_HS_THPT.View
             {
                 MessageBox.Show("Bạn chưa nhập học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtTenHS.Text == "")
+            else if (txtTenHS.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập tên học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (cbMaLop.Text == "")
+            else if(cbMaLop.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập lớp học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (radNam.Checked == false && radNu.Checked==false)
+            else if(radNam.Checked == false && radNu.Checked==false)
             {
                 MessageBox.Show("Bạn chưa chọn giới tính cho học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtDanToc.Text == "")
+            else if(txtDanToc.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập dân tộc học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtTonGiao.Text == "")
+            else if(txtTonGiao.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập tôn giáo học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtDiaChi.Text == "")
+            else if (txtDiaChi.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập địa chỉ học sinh! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            txtMaHS.Enabled = false;
-            // xử lý
-            obj.MaHS = txtMaHS.Text;
-            obj.TenHS = txtTenHS.Text;
-            obj.MaLop = cbMaLop.SelectedValue.ToString();
-            obj.TonGiao = txtTonGiao.Text;
-            obj.DanToc = txtDanToc.Text;
-            obj.NgaySinh = dtNgaySinh.Value;
-            obj.DiaChi = txtDiaChi.Text;
-
-            string gt;
-            if (radNam.Checked)
+            else
             {
-                gt = "Nam";
-            }
-            else gt = "Nữ";
+                txtMaHS.Enabled = false;
+                // xử lý
+                obj.MaHS = txtMaHS.Text;
+                obj.TenHS = txtTenHS.Text;
+                obj.MaLop = cbMaLop.SelectedValue.ToString();
+                obj.TonGiao = txtTonGiao.Text;
+                obj.DanToc = txtDanToc.Text;
+                obj.NgaySinh = dtNgaySinh.Value;
+                obj.DiaChi = txtDiaChi.Text;
 
-            obj.GioiTinh = gt;
+                string gt;
+                if (radNam.Checked)
+                {
+                    gt = "Nam";
+                }
+                else gt = "Nữ";
 
-            if (txtMaHS.Text != "" && txtTenHS.Text !="" && cbMaLop.SelectedValue.ToString() != "" && txtDanToc.Text !="" && txtTonGiao.Text !="" && txtDiaChi.Text !="" && (radNam.Checked == true || radNu.Checked==true) && fluu == 0)
-            {
-                try
+                obj.GioiTinh = gt;
+
+                if (fluu == 0)
                 {
-                    Bus.InsertData(obj);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
-                    fluu = 1;
+                    try
+                    {
+                        Bus.InsertData(obj);
+                        MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                        fluu = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi!" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else if (fluu != 0)
                 {
-                    MessageBox.Show("Lỗi!" + ex.Message);
+                    try
+                    {
+                        Bus.UpdateData(obj);
+                        MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi sửa" + ex.Message);
+                    }
                 }
-            }
-            else if (txtMaHS.Text != "" && txtTenHS.Text != "" && cbMaLop.SelectedValue.ToString() != "" && txtDanToc.Text != "" && txtTonGiao.Text != "" && txtDiaChi.Text != "" && (radNam.Checked == true || radNu.Checked == true) && fluu !=0)
-            {
-                try
-                {
-                    Bus.UpdateData(obj);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi sửa" + ex.Message);
-                }
+            
             }
         }
 
