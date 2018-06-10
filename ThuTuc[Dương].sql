@@ -21,8 +21,8 @@ ALTER PROC SP_SuaDiem(@MaHS VARCHAR(10), @MaMon VARCHAR(10),@DiemMieng FLOAT,@Di
  AS
  BEGIN
  UPDATE dbo.Diem
- SET MaMon=@MaMon,DiemMieng=@DiemMieng,Diem15ph=@Diem15ph,Diem1Tiet=@Diem1Tiet,DiemHocKy=@DiemHocKy
- WHERE MaHS=@MaHS 
+ SET DiemMieng=@DiemMieng,Diem15ph=@Diem15ph,Diem1Tiet=@Diem1Tiet,DiemHocKy=@DiemHocKy
+ WHERE MaHS=@MaHS AND MaMon=@MaMon
  END
  GO 
  --Xóa điểm
