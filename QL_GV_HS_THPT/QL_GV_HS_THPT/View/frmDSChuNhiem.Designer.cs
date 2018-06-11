@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSChuNhiem));
             this.lbDSCN = new System.Windows.Forms.Label();
             this.grbThaoTac = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -36,9 +37,9 @@
             this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMaGV = new System.Windows.Forms.TextBox();
             this.btnDatChuNhiem = new System.Windows.Forms.Button();
             this.dgvCN = new System.Windows.Forms.DataGridView();
+            this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grbThaoTac.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,13 +126,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Giáo Viên Chủ Nhiệm";
             // 
-            // txtMaGV
-            // 
-            this.txtMaGV.Location = new System.Drawing.Point(101, 29);
-            this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(96, 20);
-            this.txtMaGV.TabIndex = 39;
-            // 
             // btnDatChuNhiem
             // 
             this.btnDatChuNhiem.Location = new System.Drawing.Point(104, 168);
@@ -149,6 +143,13 @@
             this.dgvCN.Name = "dgvCN";
             this.dgvCN.Size = new System.Drawing.Size(429, 131);
             this.dgvCN.TabIndex = 37;
+            // 
+            // txtMaGV
+            // 
+            this.txtMaGV.Location = new System.Drawing.Point(101, 29);
+            this.txtMaGV.Name = "txtMaGV";
+            this.txtMaGV.Size = new System.Drawing.Size(96, 20);
+            this.txtMaGV.TabIndex = 39;
             // 
             // label1
             // 
@@ -169,10 +170,11 @@
             this.Controls.Add(this.txtMaGV);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lbDSCN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDSChuNhiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh Sách Chủ Nhiệm";
+            this.Text = "Thông tin chủ nhiệm";
             this.Load += new System.EventHandler(this.frmDSChuNhiem_Load);
             this.grbThaoTac.ResumeLayout(false);
             this.grbThaoTac.PerformLayout();

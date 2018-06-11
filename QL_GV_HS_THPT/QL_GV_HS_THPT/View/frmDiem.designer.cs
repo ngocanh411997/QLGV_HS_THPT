@@ -41,6 +41,15 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDiem = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem15ph = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem1Tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbMaHS = new System.Windows.Forms.ComboBox();
             this.cmbMaMon = new System.Windows.Forms.ComboBox();
@@ -61,15 +70,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem15ph = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem1Tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
@@ -250,6 +250,61 @@
             this.dgvDiem.TabIndex = 0;
             this.dgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiem_CellClick);
             this.dgvDiem.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvDiem_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.Name = "MaHS";
+            // 
+            // TenHS
+            // 
+            this.TenHS.DataPropertyName = "TenHS";
+            this.TenHS.HeaderText = "Tên học sinh";
+            this.TenHS.Name = "TenHS";
+            // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            this.MaMon.HeaderText = "Mã Môn";
+            this.MaMon.Name = "MaMon";
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            this.TenMon.HeaderText = "Tên môn";
+            this.TenMon.Name = "TenMon";
+            // 
+            // DiemMieng
+            // 
+            this.DiemMieng.DataPropertyName = "DiemMieng";
+            this.DiemMieng.HeaderText = "Điểm miệng";
+            this.DiemMieng.Name = "DiemMieng";
+            // 
+            // Diem15ph
+            // 
+            this.Diem15ph.DataPropertyName = "Diem15ph";
+            this.Diem15ph.HeaderText = "Điểm 15 phút";
+            this.Diem15ph.Name = "Diem15ph";
+            // 
+            // Diem1Tiet
+            // 
+            this.Diem1Tiet.DataPropertyName = "Diem1Tiet";
+            this.Diem1Tiet.HeaderText = "Điểm 1 tiết";
+            this.Diem1Tiet.Name = "Diem1Tiet";
+            // 
+            // DiemHocKy
+            // 
+            this.DiemHocKy.DataPropertyName = "DiemHocKy";
+            this.DiemHocKy.HeaderText = "Điểm học kỳ";
+            this.DiemHocKy.Name = "DiemHocKy";
+            this.DiemHocKy.Width = 150;
             // 
             // groupBox1
             // 
@@ -449,61 +504,6 @@
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.Name = "MaHS";
-            // 
-            // TenHS
-            // 
-            this.TenHS.DataPropertyName = "TenHS";
-            this.TenHS.HeaderText = "Tên học sinh";
-            this.TenHS.Name = "TenHS";
-            // 
-            // MaMon
-            // 
-            this.MaMon.DataPropertyName = "MaMon";
-            this.MaMon.HeaderText = "Mã Môn";
-            this.MaMon.Name = "MaMon";
-            // 
-            // TenMon
-            // 
-            this.TenMon.DataPropertyName = "TenMon";
-            this.TenMon.HeaderText = "Tên môn";
-            this.TenMon.Name = "TenMon";
-            // 
-            // DiemMieng
-            // 
-            this.DiemMieng.DataPropertyName = "DiemMieng";
-            this.DiemMieng.HeaderText = "Điểm miệng";
-            this.DiemMieng.Name = "DiemMieng";
-            // 
-            // Diem15ph
-            // 
-            this.Diem15ph.DataPropertyName = "Diem15ph";
-            this.Diem15ph.HeaderText = "Điểm 15 phút";
-            this.Diem15ph.Name = "Diem15ph";
-            // 
-            // Diem1Tiet
-            // 
-            this.Diem1Tiet.DataPropertyName = "Diem1Tiet";
-            this.Diem1Tiet.HeaderText = "Điểm 1 tiết";
-            this.Diem1Tiet.Name = "Diem1Tiet";
-            // 
-            // DiemHocKy
-            // 
-            this.DiemHocKy.DataPropertyName = "DiemHocKy";
-            this.DiemHocKy.HeaderText = "Điểm học kỳ";
-            this.DiemHocKy.Name = "DiemHocKy";
-            this.DiemHocKy.Width = 150;
-            // 
             // frmDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,9 +519,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDiem";
+            this.Text = "Điểm";
             this.Load += new System.EventHandler(this.frmDiem_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

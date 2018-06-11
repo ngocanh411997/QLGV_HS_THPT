@@ -75,14 +75,14 @@
             // đăngNhậpToolStripMenuItem
             // 
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng Xuất";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -91,13 +91,13 @@
             this.quảnLýChungToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýChungToolStripMenuItem1});
             this.quảnLýChungToolStripMenuItem.Name = "quảnLýChungToolStripMenuItem";
-            this.quảnLýChungToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.quảnLýChungToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.quảnLýChungToolStripMenuItem.Text = "Quản Lý";
             // 
             // quảnLýChungToolStripMenuItem1
             // 
             this.quảnLýChungToolStripMenuItem1.Name = "quảnLýChungToolStripMenuItem1";
-            this.quảnLýChungToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.quảnLýChungToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
             this.quảnLýChungToolStripMenuItem1.Text = "Quản Lý Chung";
             this.quảnLýChungToolStripMenuItem1.Click += new System.EventHandler(this.quảnLýChungToolStripMenuItem1_Click);
             // 
@@ -116,9 +116,10 @@
             this.ClientSize = new System.Drawing.Size(915, 653);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

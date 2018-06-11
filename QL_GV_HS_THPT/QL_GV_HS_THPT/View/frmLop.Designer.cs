@@ -316,9 +316,10 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLop";
+            this.Text = "Lớp";
             this.Load += new System.EventHandler(this.frmLop_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
